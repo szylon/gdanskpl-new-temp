@@ -1,50 +1,59 @@
-const prepareQuery = (query = {}) => 
-    Object.keys(query).length > 0 
-        ? '?' + Object.entries(query).map(([key, value]) => `${key}=${value}`).join('&') 
-        : ''; [cite: 2]
+function prepareQuery(query) {
+    query = query || {};
+    var keys = Object.keys(query);
+    if (keys.length === 0) return '';
 
-function hapi(endpoint, options = {}) {
+    var pairs = [];
+    for (var i = 0; i < keys.length; i++) {
+        var key = keys[i];
+        pairs.push(key + '=' + query[key]);
+    }
+    return '?' + pairs.join('&');
+}
+
+function hapi(endpoint, options) {
+    options = options || {};
     let get = {};
     if (typeof options.get !== 'undefined') {
-        options = { method: 'GET', ...options }; [cite: 3]
-        get = options.get; [cite: 4]
+        options = Object.assign({ method: 'GET' }, options);
+        get = options.get;
     }
-    return fetch(`https://www.gdansk.pl/hapi/${endpoint}${prepareQuery(get)}`, options); [cite: 4]
+    return fetch('https://www.gdansk.pl/hapi/' + endpoint + prepareQuery(get), options);
 }
 
 function sendStatistics(plikHapi, videoId, getPublishFrom, playerType, category) {
-    if (category !== '18') { [cite: 12]
+    if (category !== '18') {
         hapi(plikHapi, {
-            get: { videoId: videoId, url: document.URL, getPublishFrom: getPublishFrom, player: playerType } [cite: 12]
-        }).then(r => r.json()).then(d => console.log('Statystyki wysłane:', d)); [cite: 12]
+            get: { videoId: videoId, url: document.URL, getPublishFrom: getPublishFrom, player: playerType }
+        }).then(r => r.json()).then(d => console.log('Statystyki wysłane:', d));
     }
 }
 
 function sendCamStatistics(plikHapi, videoId, getPublishFrom, playerType) {
     hapi(plikHapi, {
-        get: { videoId: videoId, url: document.URL, getPublishFrom: getPublishFrom, player: playerType } [cite: 14]
-    }).then(r => r.json()).then(d => console.log('Statystyki kamery wysłane:', d)); [cite: 14]
+        get: { videoId: videoId, url: document.URL, getPublishFrom: getPublishFrom, player: playerType }
+    }).then(r => r.json()).then(d => console.log('Statystyki kamery wysłane:', d));
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     const category = window.videoCategory || '';
 
-    // Opóźnienie równe 500ms gwarantuje, że instancje Video.js zdążyły się utworzyć w player.defer.js
+    // Opóźnienie pozwala upewnić się, że instancje Video.js zostały poprawnie zainicjalizowane
     setTimeout(() => {
         // 1. PLAYER GŁÓWNY (Typ: 1)
         document.querySelectorAll('.main-player').forEach(el => {
             const playerInstance = window.videojs(el.id);
             if (playerInstance) {
                 let trackingSent = false;
-                playerInstance.on('play', function () { [cite: 23]
+                playerInstance.on('play', function () {
                     if (!trackingSent) {
-                        const videoId = el.getAttribute('data-video-id'); [cite: 23]
-                        const publishFrom = el.getAttribute('data-publish-from'); [cite: 23]
+                        const videoId = el.getAttribute('data-video-id');
+                        const publishFrom = el.getAttribute('data-publish-from');
                         
-                        if (category === '18') { [cite: 13]
-                            sendCamStatistics('statystykiVideo', videoId, publishFrom, 0); [cite: 13]
+                        if (category === '18') {
+                            sendCamStatistics('statystykiVideo', videoId, publishFrom, 0);
                         } else {
-                            sendStatistics('statystykiVideo', videoId, publishFrom, 1, category); [cite: 23]
+                            sendStatistics('statystykiVideo', videoId, publishFrom, 1, category);
                         }
                         trackingSent = true;
                     }
@@ -57,11 +66,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const playerInstance = window.videojs(el.id);
             if (playerInstance) {
                 let trackingSent = false;
-                playerInstance.on('playing', function () { [cite: 20]
+                playerInstance.on('playing', function () {
                     if (!trackingSent) {
-                        const videoId = el.getAttribute('data-video-id'); [cite: 20]
-                        const publishFrom = el.getAttribute('data-publish-from'); [cite: 20]
-                        sendStatistics('statystykiVideo', videoId, publishFrom, 2, category); [cite: 20]
+                        const videoId = el.getAttribute('data-video-id');
+                        const publishFrom = el.getAttribute('data-publish-from');
+                        sendStatistics('statystykiVideo', videoId, publishFrom, 2, category);
                         trackingSent = true;
                     }
                 });
@@ -73,11 +82,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const playerInstance = window.videojs(el.id);
             if (playerInstance) {
                 let trackingSent = false;
-                playerInstance.on('playing', function () { [cite: 17]
+                playerInstance.on('playing', function () {
                     if (!trackingSent) {
-                        const videoId = el.getAttribute('data-video-id'); [cite: 17]
-                        const publishFrom = el.getAttribute('data-publish-from'); [cite: 17]
-                        sendStatistics('statystykiVideo', videoId, publishFrom, 3, category); [cite: 17]
+                        const videoId = el.getAttribute('data-video-id');
+                        const publishFrom = el.getAttribute('data-publish-from');
+                        sendStatistics('statystykiVideo', videoId, publishFrom, 3, category);
                         trackingSent = true;
                     }
                 });
