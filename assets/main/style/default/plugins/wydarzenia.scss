@@ -1,0 +1,64 @@
+.wydarzenia {
+    .thumb .card {
+        border: 1px solid $gray !important;
+        background: $white !important;
+
+        .card-body {
+            padding: 0.5rem 0.5rem 0 0.5rem;
+        }
+        .card-title {
+            font-size: 1rem;
+        }
+        .card-footer {
+            background-color: transparent;
+            border-top: 0;
+            padding: 0 0.5rem 0.5rem 0.5rem;
+        }
+        .list-group {
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+        .list-group-item {
+            background-color: transparent;
+            color: $white;
+        }
+    }
+    .calendar .button-day {
+        width: 50px;
+    }
+    .calendar .caption-day {
+        font-weight: 300;
+        text-align: center;
+    }
+
+    .btn {
+        opacity: 1;
+    }
+    .btn-sm {
+        font-size: 0.8rem;
+    }
+    .btn-primary {
+        border: 0;
+    }
+
+    .multi-collapse > div {
+        background: transparent;
+        border: 0 !important;
+        padding: 0;
+    }
+    .btn-collapse[aria-expanded="true"]:after {
+        content: "Zwiń";
+    }
+    .btn-collapse[aria-expanded="false"]:after {
+        content: "Rozwiń";
+    }
+}
+
+.kalendarz-box,
+.extra-box,
+.danger-box,
+.rip-box {
+    .wydarzenia {
+        color: white;
+    }
+}

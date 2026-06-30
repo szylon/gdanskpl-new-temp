@@ -1,0 +1,21 @@
+@import "./../custom-colors";
+
+// $primary: #003d20;
+$primary:  #003d20;
+$secondary: #147403;
+
+
+$page-colors: ("primary": $primary,
+	"secondary": $secondary,
+
+);
+$theme-colors: map-merge($theme-colors, $page-colors);
+
+@import "./../main";
+@import "./../plugins/ekologia.scss";
+
+.ekologia {
+	.special-thumb .thumb .card .card-body {
+		padding: 1.5rem 0.5rem;
+	}
+}

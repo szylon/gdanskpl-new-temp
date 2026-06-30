@@ -1,0 +1,21 @@
+@import "./../custom-colors";
+
+$primary: #eb150d;
+$secondary: #4b6788;
+$third: #88a6ca;
+
+
+
+
+$page-colors: (
+	"primary": $primary,
+	"secondary": $secondary,
+	"third": $third);
+$theme-colors: map-merge($theme-colors, $page-colors);
+
+@import "./../main";
+
+.gdansk-patriotyczny {
+	
+	
+}

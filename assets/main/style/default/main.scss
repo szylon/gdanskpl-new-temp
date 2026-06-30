@@ -1,0 +1,33 @@
+// main.scss
+
+$pagination-active-bg: $primary;
+$pagination-active-border-color: $primary;
+$pagination-active-color: white;
+$pagination-color: var(--bs-body-color);
+
+// 1. Rdzeń konfiguracyjny Bootstrapa (Musi być najpierw!)
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/maps";      // <--- TUTAJ BOOTSTRAP BUDUJE $theme-colors!
+@import "~bootstrap/scss/mixins";
+
+// 2. Twoje nadpisania i rozszerzenia map (Teraz mają pełny dostęp)
+@import "./custom-colors";           // <--- PRZENIESIONE TUTAJ (map-merge zadziała idealnie)
+@import "./theme-list";
+
+@import "~bootstrap/scss/utilities";
+
+@import "./custom-variables";
+
+// 3. Kompilacja stylów bazowych Bootstrapa
+@import "~bootstrap/scss/bootstrap";
+
+// 4. Twój automatyczny generator motywów (Na samym końcu, by nadpisać priorytety)
+@import "./theme-generator";
+
+// 5. Dodatkowe wtyczki i style autorskie
+@import "owl.carousel/dist/assets/owl.carousel.css";
+@import "./customer-styles";
+@import "./customer-plugins";
+@import "~bootstrap-table/src/bootstrap-table";
+@import "~bootstrap-icons/font/bootstrap-icons";

@@ -1,0 +1,58 @@
+@import "./../custom-colors";
+
+$primary: #3fa535;
+$secondary: #111747;
+$third: #fa552d;
+
+$page-colors: ("primary": $primary,
+	"secondary": $secondary,
+	"third": $third,
+
+);
+$theme-colors: map-merge($theme-colors, $page-colors);
+
+@import "./../main";
+
+
+
+.pit {
+	a {
+		color: $primary;
+		&:link, &:visited {
+			text-decoration: underline;
+		}
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	.navbar-nav {
+		font-size: 1.2em
+	}
+
+	.navbar-nav a {
+		color: black;
+	}
+
+	.navbar-nav a.nav-link:after {
+		padding: 30px 10px 0 20px;
+		border-right: 1px solid $third;
+		content: " ";
+		font-size: 2rem;
+		font-weight: normal !important;
+		display: inline-block;
+		-webkit-transform: rotate(30deg);
+		-moz-transform: rotate(30deg);
+		-o-transform: rotate(30deg);
+		-ms-transform: rotate(30deg);
+		transform: rotate(30deg);
+	}
+
+	.navbar-nav a.nav-link:last-child:after {
+		border: 0
+	}
+
+	.navbar-toggler {
+		border: 0
+	}
+}

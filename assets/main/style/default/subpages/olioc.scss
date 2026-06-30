@@ -1,0 +1,25 @@
+// Importy Bootstrapa, aby mieć dostęp do zmiennych, mixinów i funkcji
+// Podstawowe importy dla podstron
+@import "../subpage-base-imports.scss";
+
+.olioc {
+    #decor-plus {
+        width: 22px;
+        height: 22px;
+    }
+    #decor-plus rect {
+        fill: var(--bs-white);
+    }
+    #decor-plus-2 {
+        width: 22px;
+        height: 22px;
+    }
+    #decor-plus-2 rect {
+        fill: var(--bs-primary);
+    }
+
+    .numery-alarmowe .summary {
+        font-size: 1.25em;
+        font-weight: 700;
+    }
+}

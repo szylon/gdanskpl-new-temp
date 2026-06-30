@@ -1,0 +1,107 @@
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/v4-shims';
+
+
+
+@import "~@fontsource/kanit/scss/mixins";
+
+@include fontFaceCustom(
+  $weight: 300,
+  $display: fallback,
+  $woffPath: "~@fontsource/kanit/files/kanit-latin-ext-200-normal.woff",
+  $woff2Path: "~@fontsource/kanit/files/kanit-latin-ext-200-normal.woff2",
+  $unicodeRange: false
+);
+
+@include fontFaceCustom(
+  $weight: 300,
+  $display: fallback,
+  $woff2Path: "~@fontsource/kanit/files/kanit-latin-200-normal.woff2",
+  $unicodeRange: false
+);
+@include fontFace(
+  $weight: 400,
+  $display: fallback,
+  $fontDir: "~@fontsource/kanit/files"
+);
+
+@include fontFaceCustom(
+  $weight: 400,
+  $display: fallback,
+  $woffPath: "~@fontsource/kanit/files/kanit-latin-ext-300-normal.woff",
+  $woff2Path: "~@fontsource/kanit/files/kanit-latin-ext-300-normal.woff2",
+  $unicodeRange: false
+);
+
+@include fontFaceCustom(
+  $weight: 400,
+  $display: fallback,
+  $woff2Path: "~@fontsource/kanit/files/kanit-latin-300-normal.woff2",
+  $unicodeRange: false
+);
+
+@include fontFaceCustom(
+  $weight: 500,
+  $display: fallback,
+  $woffPath: "~@fontsource/kanit/files/kanit-latin-ext-400-normal.woff",
+  $woff2Path: "~@fontsource/kanit/files/kanit-latin-ext-400-normal.woff2",
+  $unicodeRange: false
+);
+
+@include fontFaceCustom(
+  $weight: 500,
+  $display: fallback,
+  $woff2Path: "~@fontsource/kanit/files/kanit-latin-400-normal.woff2",
+  $unicodeRange: false
+);
+
+@include fontFaceCustom(
+  $weight: 600,
+  $display: fallback,
+  $woffPath: "~@fontsource/kanit/files/kanit-latin-ext-500-normal.woff",
+  $woff2Path: "~@fontsource/kanit/files/kanit-latin-ext-500-normal.woff2",
+  $unicodeRange: false
+);
+
+@include fontFaceCustom(
+  $weight: 600,
+  $display: fallback,
+  $woff2Path: "~@fontsource/kanit/files/kanit-latin-500-normal.woff2",
+  $unicodeRange: false
+);
+
+@include fontFaceCustom(
+  $weight: 700,
+  $display: fallback,
+  $woffPath: "~@fontsource/kanit/files/kanit-latin-ext-600-normal.woff",
+  $woff2Path: "~@fontsource/kanit/files/kanit-latin-ext-600-normal.woff2",
+  $unicodeRange: false
+);
+
+@include fontFaceCustom(
+  $weight: 700,
+  $display: fallback,
+  $woff2Path: "~@fontsource/kanit/files/kanit-latin-600-normal.woff2",
+  $unicodeRange: false
+);
+
+@include fontFaceCustom(
+  $weight: 900,
+  $display: fallback,
+  $woffPath: "~@fontsource/kanit/files/kanit-latin-ext-700-normal.woff",
+  $woff2Path: "~@fontsource/kanit/files/kanit-latin-ext-700-normal.woff2",
+  $unicodeRange: false
+);
+
+@include fontFaceCustom(
+  $weight: 900,
+  $display: fallback,
+  $woff2Path: "~@fontsource/kanit/files/kanit-latin-700-normal.woff2",
+  $unicodeRange: false
+);
+
+

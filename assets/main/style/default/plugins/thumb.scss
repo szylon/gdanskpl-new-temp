@@ -1,0 +1,395 @@
+/*Thumb*/
+.warning {
+    .blur {
+        .apla {
+            background-color: var(--bs-danger);
+        }
+    }
+}
+
+.danger {
+    .blur {
+        background-color: rgba(204, 0, 0, 0.7);
+        backdrop-filter: blur(5px) saturate(0%);
+
+        .apla {
+            background-color: var(-var(--bs-white)-light);
+            color: $red;
+        }
+    }
+}
+
+.rip {
+    .blur {
+        background-color: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(5px) saturate(0%);
+
+        .apla {
+            background-color: $black;
+        }
+
+        img {
+            -webkit-filter: grayscale(100%);
+            -moz-filter: grayscale(100%);
+            -o-filter: grayscale(100%);
+            -ms-filter: grayscale(100%);
+            filter: grayscale(100%);
+        }
+    }
+}
+
+.extra {
+    .blur {
+        .apla {
+            background-color: #60922b;
+        }
+    }
+}
+
+.row .col:last-child .thumb {
+    border: 0;
+}
+
+.noLink .thumb {
+    &:hover {
+        text-decoration: none !important;
+
+        img {
+            transform: none;
+        }
+    }
+}
+
+.thumb {
+    position: relative;
+    display: block;
+
+    &:hover {
+        text-decoration: none !important;
+
+        img {
+            transform: scale(1.05);
+        }
+    }
+
+    .card {
+        border: 0;
+        color: var(--bs-body-color);
+        line-height: 1.3;
+        overflow: hidden;
+        border-radius: $border-radius;
+        background: transparent;
+        font-weight: 600;
+
+        .card-body {
+            padding: 0;
+        }
+
+        @include media-breakpoint-up(md) {
+            padding-bottom: 0;
+            // background: $light;
+            font-weight: 600;
+            border: 0;
+            border-radius: $border-radius;
+        }
+    }
+
+    img {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .maska {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border-radius: $border-radius;
+
+        img:not(.ikona-felieton-extra) {
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        i {
+            color: var(--bs-white);
+        }
+    }
+
+    .date {
+        font-size: 0.9rem;
+
+        span {
+            border-top: 1px solid var(--bs-light);
+        }
+    }
+
+    .summary,
+    .content {
+        font-size: 1rem;
+        padding: 5px 0;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .caption-right {
+        padding: 0.5rem;
+    }
+
+    .caption-into {
+        position: absolute;
+        padding: 20% 3% 3% 3%;
+        right: 0;
+        bottom: 0;
+        color: #fff;
+        z-index: 1;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+        background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.9) 100%);
+        background: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            color-stop(0%, rgba(0, 0, 0, 0)),
+            color-stop(10%, rgba(0, 0, 0, 0)),
+            color-stop(100%, rgba(0, 0, 0, 0.8))
+        );
+        background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.8) 100%);
+        background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.9) 100%);
+        background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.9) 100%);
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.9) 100%);
+        width: 100%;
+        font-weight: 600;
+        overflow: hidden;
+        line-height: 1.2;
+
+        @include media-breakpoint-down(md) {
+            padding: 3rem 0.75rem 0.75rem 0.75rem;
+        }
+    }
+
+    .icon {
+        color: var(--bs-white);
+        z-index: 3;
+        position: absolute;
+        top: 7%;
+        right: 15px;
+        text-shadow: 1px 1px 2px var(--bs-black);
+        font-size: 1.3rem;
+
+        @include media-breakpoint-down(lg) {
+            top: 10%;
+            right: 10%;
+        }
+    }
+
+    .icon-video {
+        text-shadow: 1px 1px 2px var(--bs-black);
+        z-index: 3;
+        font-size: 2em;
+    }
+
+    .jednostka {
+        color: var(--bs-third);
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    .extra,
+    .rip {
+        color: var(--bs-white);
+        padding: 0.75rem;
+
+        .card-body {
+            padding: 0.75rem 0 0 0;
+        }
+    }
+
+    .warning {
+        color: var(--bs-danger);
+    }
+
+    .danger {
+        background-color: var(--bs-danger);
+        border-radius: $border-radius;
+        color: var(--bs-white);
+
+        .card-body {
+            padding: 0 0.75rem 0.75rem 0.75rem;
+        }
+    }
+
+    .important {
+        background-color: var(--bs-yellow);
+
+        .card-body {
+            padding: 0 0.75rem 0.75rem 0.75rem;
+        }
+    }
+
+    .extra {
+        background-color: var(--bs-primary);
+    }
+
+    .rip {
+        background-color: var(--bs-black);
+
+        img {
+            -webkit-filter: grayscale(100%) !important;
+            -moz-filter: grayscale(100%) !important;
+            -o-filter: grayscale(100%) !important;
+            -ms-filter: grayscale(100%) !important;
+            filter: grayscale(100%) !important;
+        }
+    }
+
+    .foto-circle {
+        border-radius: 50% !important;
+        overflow: hidden;
+    }
+
+    .foto-circle img {
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .foto-rotate {
+        position: relative;
+        // width: 300px;
+        /* dostosuj do swoich zdjęć */
+        // height: 300px;
+        perspective: 1100px;
+        /* głębia 3D */
+
+        .inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        &:hover .inner {
+            transform: rotateY(180deg);
+            /* efekt odwrócenia w poziomie */
+        }
+
+        .front,
+        .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            /* ukrywa drugą stronę */
+        }
+
+        .front img,
+        .back img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .back {
+            transform: rotateY(180deg);
+        }
+    }
+}
+
+.special-thumb {
+    .thumb {
+        height: 100%;
+        background: var(--bs-primary);
+        border-radius: $border-radius;
+
+        .card {
+            height: 100%;
+            color: var(--bs-white);
+
+            .card-body {
+                padding: 1.5rem;
+            }
+        }
+    }
+}
+
+.jumbotron-video,
+.kalendarz-box,
+.extra-box,
+.extra-box-dark,
+.danger-box,
+.rip-box {
+    .thumb {
+        .card {
+            border: 0;
+            background: transparent;
+            color: var(--bs-white);
+
+            .card-body {
+                font-weight: 600;
+            }
+        }
+
+        // Wyróznienie pojedynczego thumba
+        .extra,
+        .danger,
+        .rip {
+            color: var(--bs-white);
+
+            .caption2 {
+                margin: 1rem 0;
+            }
+
+            .caption-right {
+                padding: 0.5rem 0.25rem 0.5rem 0;
+            }
+        }
+
+        .caption-right {
+            padding: 0;
+        }
+
+        .warning {
+            color: var(--bs-danger);
+        }
+
+        .danger {
+            background-color: var(--bs-danger);
+        }
+
+        .extra {
+            background-color: var(--bs-primary);
+        }
+
+        .rip {
+            background-color: var(--bs-black);
+
+            img {
+                -webkit-filter: grayscale(100%) !important;
+                -moz-filter: grayscale(100%) !important;
+                -o-filter: grayscale(100%) !important;
+                -ms-filter: grayscale(100%) !important;
+                filter: grayscale(100%) !important;
+            }
+        }
+    }
+}
+
+// reklama
+.reklama {
+    .thumb {
+        border: 0;
+    }
+
+    img {
+        border: 1px solid var(--bs-light);
+    }
+}

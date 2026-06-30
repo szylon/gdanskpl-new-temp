@@ -1,0 +1,4 @@
+@import "./../custom-colors"; // 1. Ładuje zmienne. $theme-colors tworzy się jako puste ().
+@import "./../main";          // 2. Ładuje main.scss, który nadpisze i poprawnie zbuduje resztę stylów.
+
+// Twoje dodatkowe style dla domyślnego arkusza...

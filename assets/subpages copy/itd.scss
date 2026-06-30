@@ -1,0 +1,65 @@
+@import "./../custom-colors";
+
+$primary: #005ca9;
+$secondary: #ec6608;
+$third: #009be3;
+
+
+$page-colors: ("primary": $primary,
+	"secondary": $secondary,
+	"third": $third);
+$theme-colors: map-merge($theme-colors, $page-colors);
+
+@import "./../main";
+
+.itd {
+
+
+	.menu-itd a:not(.home):before {
+		content: "";
+		display: inline-block;
+		margin-right: 7px;
+		width: 1em;
+		height: 1em;
+		background: no-repeat center / contain url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 157 141.7'><polygon fill='%23ec6608' points='50.6 1.3 0 140.5 106.4 140.5 157 1.3 50.6 1.3'/></svg>");
+	}
+
+	.menu-itd a.btn-komunikaty:before {
+		content: "";
+		display: inline-block;
+		margin-right: 7px;
+		width: 1em;
+		height: 1em;
+		background: no-repeat center / contain url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 157 141.7'><polygon fill='%23005ca9' points='50.6 1.3 0 140.5 106.4 140.5 157 1.3 50.6 1.3'/></svg>");
+	}
+
+	main {
+		.article-content {
+
+			a:link,
+			a:visited {
+				color: $primary
+			}
+		}
+
+		@include media-breakpoint-up(md) {
+			.bar-title h2 {
+				font-size: 1.5em
+			}
+		}
+
+		.bar-title .h2:before,
+		.bar-title h2:before {
+			content: "";
+			display: inline-block;
+			margin-right: 7px;
+			width: 1em;
+			height: 1em;
+			background: no-repeat center / contain url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 157 141.7'><polygon fill='%23ec6608' points='50.6 1.3 0 140.5 106.4 140.5 157 1.3 50.6 1.3'/></svg>");
+		}
+
+		.anchor {
+			scroll-margin-top: 85px;
+		}
+	}
+}

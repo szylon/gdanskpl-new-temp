@@ -1,0 +1,15 @@
+@import "./../custom-colors";
+
+$secondary: #7e00c9;
+$third: #f3d43e;
+
+
+$page-colors: (
+	"secondary": $secondary,
+	"third": $third,
+
+);
+$theme-colors: map-merge($theme-colors, $page-colors);
+
+@import "./../main";
+@import "./../plugins/strategia.scss";

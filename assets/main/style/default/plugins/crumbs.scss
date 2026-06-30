@@ -1,0 +1,42 @@
+.crumbes {
+  overflow: hidden;
+  margin-bottom: 10px;
+  padding: 0px;
+
+  ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    li {
+      display: inline;
+      font-size: 0.9rem;
+      a {
+        &:link,
+        &:visited {
+          color: $body-color;
+        }
+        &:hover {
+          color: var(--bs-primary);
+        }
+        &:active {
+          color: transparent;
+        }
+      }
+      &:last-child:after {
+        content: "";
+      }
+      &:not(:last-child):after {
+        margin: 0px 5px;
+        content: "/";
+      }
+
+      &:nth-child(n) > a > span.procedury-urzedowe-link {
+        display: inline;
+        cursor: pointer;
+        padding: 0px;
+        color: $black;
+        background-color: $white;
+      }
+    }
+  }
+}

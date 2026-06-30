@@ -1,0 +1,16 @@
+@import "./../custom-colors";
+
+$primary: #94d3f4;
+$secondary: #79dd6d;
+$third: #f578bc;
+$four: #f5e262;
+
+
+$page-colors: ("primary": $primary,
+	"secondary": $secondary,
+	"third": $third,
+	"four": $four);
+$theme-colors: map-merge($theme-colors, $page-colors);
+
+@import "./../main";
+@import "./../plugins/gdansk-dziala.scss";

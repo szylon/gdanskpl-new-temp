@@ -1,0 +1,34 @@
+@import "./../custom-colors";
+$default-primary:           #52545E ;
+
+$primary: #13354e;
+$secondary: #4b6788;
+$third: #88a6ca;
+$four: #001e43;
+
+$body-color: #f6f6f6;
+$background-color: #242735;
+
+$page-colors: (
+	"default-primary": $default-primary,
+	"primary": $primary,
+	"secondary": $secondary,
+	"third": $third);
+$theme-colors: map-merge($theme-colors, $page-colors);
+
+@import "./../main";
+@import "./../plugins/article-felieton.scss";
+
+.felieton {
+	.owl-carousel {
+		.owl-nav {
+			.carousel-control-next-icon,
+			.carousel-control-prev-icon {
+				filter: brightness(1)
+			}
+		}
+	}
+}
+.kraszewski {
+	background: #1d1d1d
+}

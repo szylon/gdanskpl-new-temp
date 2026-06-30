@@ -1,0 +1,96 @@
+.rip-box {
+    background-color: $black;
+}
+
+.light-box {
+    border-radius: $border-radius;
+    padding: 1rem 1rem 0 1rem;
+    .thumb {
+        color: $black;
+        .card {
+            color: $black !important;
+        }
+    }
+}
+
+.dark-box {
+    border-radius: $border-radius;
+    padding: 1rem 1rem 0 1rem;
+    display: flow-root;
+
+    .article-content {
+        p,
+        span:not(a span) {
+            color: $white;
+        }
+    }
+
+    .bar-title a {
+        &:link,
+        &:visited {
+            color: $white;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .thumb {
+        background: transparent;
+        color: $white;
+
+        .card {
+            border: 0;
+            background: transparent;
+            color: $white !important;
+
+            .card-body {
+                font-weight: 600;
+            }
+        }
+
+        // Wyróznienie pojedynczego thumba
+        .extra,
+        .danger,
+        .rip {
+            color: $white;
+
+            .caption2 {
+                margin: 1rem 0;
+            }
+
+            .caption-right {
+                padding: 0.5rem 0.25rem 0.5rem 0;
+            }
+        }
+
+        .caption-right {
+            padding: 0;
+        }
+
+        .warning {
+            color: $danger;
+        }
+
+        .danger {
+            background-color: $danger;
+        }
+
+        .extra {
+            background-color: var(--bs-primary);
+        }
+
+        .rip {
+            background-color: $black;
+
+            img {
+                -webkit-filter: grayscale(100%) !important;
+                -moz-filter: grayscale(100%) !important;
+                -o-filter: grayscale(100%) !important;
+                -ms-filter: grayscale(100%) !important;
+                filter: grayscale(100%) !important;
+            }
+        }
+    }
+}

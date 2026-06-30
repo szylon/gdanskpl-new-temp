@@ -1,0 +1,60 @@
+@import "./../custom-colors";
+
+$primary: 	#531B1B;
+$secondary: #AE5555;
+$background-color: #F8ECD9;
+
+$colour-pkgm-1: #531B1B;
+$colour-pkgm-2: #AE5555;
+$colour-pkgm-3: #D5A6A6;
+$colour-pkgm-4: #E5A07E;
+$colour-pkgm-5: #DEC396;
+$colour-pkgm-6: #F8ECD9;
+$colour-pkgm-7: #B3BBB9;
+$colour-pkgm-8: #99B7A8;
+
+
+$page-colors: (
+	"primary": $primary,
+	"secondary": $secondary,
+	"background-color":$background-color,
+	"colour-pkgm-1": $colour-pkgm-1,
+	"colour-pkgm-2": $colour-pkgm-2,
+	"colour-pkgm-3": $colour-pkgm-3,
+	"colour-pkgm-4": $colour-pkgm-4,
+	"colour-pkgm-5": $colour-pkgm-5,
+	"colour-pkgm-6": $colour-pkgm-6,
+	"colour-pkgm-7": $colour-pkgm-7,
+	"colour-pkgm-8": $colour-pkgm-8
+
+);
+
+
+
+$theme-colors: map-merge($theme-colors, $page-colors);
+
+
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+
+
+$accordion-border-radius:0;
+
+@import url("https://p.typekit.net/p.css?s=1&k=svj2old&ht=tk&f=57245&a=84989056&app=typekit&e=css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@font-face {
+font-family:"thermal-variable";
+src:url("https://use.typekit.net/af/e97126/00000000000000007755a0a4/31/l?primer=2a64b7354accbfccf091944358d6cba32f300a9a753ae564cfcf2ef3ec0bce66&fvd=n1&v=3") format("woff2"),url("https://use.typekit.net/af/e97126/00000000000000007755a0a4/31/d?primer=2a64b7354accbfccf091944358d6cba32f300a9a753ae564cfcf2ef3ec0bce66&fvd=n1&v=3") format("woff"),url("https://use.typekit.net/af/e97126/00000000000000007755a0a4/31/a?primer=2a64b7354accbfccf091944358d6cba32f300a9a753ae564cfcf2ef3ec0bce66&fvd=n1&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:100 900;font-stretch:normal;
+}
+
+
+@import "./../main";
+@import "./../plugins/park-kulturowy.scss";
+
+
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;

@@ -1,0 +1,127 @@
+.sidenav {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1051;
+	top: 0;
+	right: 0;
+	background-color: #000;
+	overflow-x: hidden;
+	transition: 0.5s;
+	visibility: hidden;
+	font-size: 3rem;
+
+	ul {
+		padding: 0px;
+		margin: 0px;
+		list-style: none;
+		border-left: 4px solid white;
+		height: 100%;
+		text-align: center;
+
+		li {
+			hr {
+				border-top: 1px solid $yellow;
+				opacity: 1
+			}
+
+			button {
+				color: $yellow;
+				background: #000;
+				border: 0;
+
+				&:hover {
+					color: white;
+				}
+			}
+
+			svg {
+				max-width: 50px;
+			}
+
+			.svg-icon {
+				fill: $yellow;
+				transition: fill 0.3s;
+			}
+
+			a:hover .svg-icon,
+			a:focus .svg-icon {
+				fill: #fff;
+			}
+
+			a {
+
+				&:link,
+				&:visited {
+					color: $yellow;
+					transition: 0.3s;
+				}
+
+				&:hover {
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+.sidenav.show {
+	width: 20%;
+}
+
+.openbtn {
+	font-size: 1.8rem;
+	cursor: pointer;
+	background-color: transparent;
+	color: $yellow;
+	padding: 3px 10px;
+	border: none;
+	text-align: center;
+	transition: 0.5s;
+	position: relative;
+	z-index: 999;
+	width: 50px;
+	height: 50px;
+
+	@include media-breakpoint-up(lg) {
+		font-size: 2rem;
+		width: 60px;
+		height: 60px;
+	}
+
+	&:hover {
+		color: white;
+	}
+
+	&::after {
+		font-family: "Font Awesome 6 Free";
+		font-weight: 900;
+		content: "\f29a";
+	}
+}
+
+.change .openbtn {
+
+	//margin-left:150px;
+	&::after {
+		font-family: "Font Awesome 6 Free";
+		font-weight: 900;
+		content: "\f00d";
+	}
+}
+
+#main {
+	transition: margin-left 0.5s;
+	transition: margin-right 0.5s;
+	position: relative;
+}
+
+@media screen and (max-height: 450px) {
+	.sidenav {
+		padding-top: 15px;
+	}
+
+	.sidenav a {
+		font-size: 18px;
+	}
+}

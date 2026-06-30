@@ -1,0 +1,36 @@
+.carousel-manual {
+    .owl-theme {
+        .owl-nav.disabled+.owl-dots {
+            margin-top: 10px
+        }
+
+        .owl-dots {
+
+            text-align: center;
+            padding-top: 10px;
+            z-index: 1080;
+
+            .owl-dot {
+                display: inline-block;
+                zoom: 1
+            }
+
+            .owl-dot span {
+                width: 10px;
+                height: 10px;
+                margin: 5px 7px;
+                background: $light;
+                display: block;
+                -webkit-backface-visibility: visible;
+                transition: opacity .2s ease;
+                border-radius: 30px
+            }
+
+            .owl-dot.active span,
+            .owl-dot:hover span {
+                background: $third;
+
+            }
+        }
+    }
+}

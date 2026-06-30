@@ -1,0 +1,90 @@
+$default-primary: #f1dd01;
+$default-secondary: #ffffff;
+
+$primary:         #f1dd01;
+$secondary:       #f1dd01;
+$third:           #f1dd01;
+$four:            #343a40;
+$light:           #343a40;
+$gray:            #f1dd01;
+$white:           #000000;
+$yellow:          #f1dd01;
+
+$body-color:      #f6f6f6;
+$black:           #ffffff;
+$danger:          #f1dd01;
+$success:         #f1dd01;
+
+$events:          #f1dd01;
+$felieton-dark:   #f1dd01;
+
+$link-color: $default-primary;
+
+$background-color:  #000000;
+
+// Submenu
+$sub-menu-background-color: $light;
+$sub-menu-color-link: $primary;
+$sub-menu-background-hover: $light;
+$sub-menu-color-hover: $body-color;
+$sub-menu-background-active: darken($light, 5%);
+$sub-menu-color-active: $body-color;
+$sub-menu-separator: 0px solid $white;
+$sub-menu-navbar-brand-background: $light;
+$sub-menu-navbar-brand-color: $body-color;
+$sub-menu-navbar-brand-separator: block; //visibility - block or none
+
+// News ticker
+$news-ticker-accordion-button: $light;
+$news-ticker-button-bg: $light;
+$news-ticker-button-border:$gray;
+$news-ticker-label:$white;
+$news-ticker-label-bg:$yellow;
+
+//box
+$extra-color: $light;
+$extra-color-dark: $light;
+
+$menu-top-background-hover: $black;
+
+
+$colour-pkgm-1: #f1dd01;
+$colour-pkgm-2: #343a40;
+$colour-pkgm-3: #343a40;
+$colour-pkgm-4: #343a40;
+$colour-pkgm-5: #343a40;
+$colour-pkgm-6: #000000;
+$colour-pkgm-7: #343a40;
+$colour-pkgm-8: #343a40;
+
+
+// $custom-colors: (
+//     "default-primary": $default-primary,
+//     "primary":      $primary,
+//     "secondary":    $secondary,
+//     "third":        $third,
+//     "four":         $four,
+//     "light":        $light,
+//     "gray":         $gray,
+//     "white":        $white,
+//     "yellow":       $yellow,
+//     "black":        $black,
+//     "danger":       $danger,
+//     "body-color":   $body-color,
+//     "background-color": $background-color,
+//     "events":       $events,
+//     "colour-pkgm-1":$colour-pkgm-1,
+//     "colour-pkgm-2":$colour-pkgm-2,
+//     "colour-pkgm-3":$colour-pkgm-3,
+//     "colour-pkgm-4":$colour-pkgm-4,
+//     "colour-pkgm-5":$colour-pkgm-5,
+//     "colour-pkgm-6":$colour-pkgm-6,
+//     "colour-pkgm-7":$colour-pkgm-7,
+//     "colour-pkgm-8":$colour-pkgm-8
+// );
+// $theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+
+
+

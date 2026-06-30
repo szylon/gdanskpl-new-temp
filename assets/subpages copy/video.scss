@@ -1,0 +1,245 @@
+@import "./../custom-colors";
+
+$primary: #002d60;
+$secondary: #4b6788;
+$third: #88a6ca;
+$four: #001e43;
+
+$body-color: #f6f6f6;
+$background-color: #242735;
+
+$page-colors: (
+	"primary": $primary,
+	"secondary": $secondary,
+	"third": $third
+);
+$theme-colors: map-merge($theme-colors, $page-colors);
+
+@import "./../main";
+
+
+
+.vignette {
+	.logo {
+		img.default {
+			display: none;
+		}
+		img.white {
+			display: block;
+		}
+	}
+	.kac {
+		a:link, a:visited {
+			color: white
+		}
+	}
+}
+.video {
+	.bar-title {
+		a:link,
+		a:visited {
+			color: $white;
+		}
+	}
+}
+section:nth-of-type(2) {
+	.content {
+		padding-top: 100px;
+	}
+	.extra-box {
+		margin-top: 100px;
+	}
+}
+#sub-menu {
+	position: absolute;
+	margin-bottom: -60px;
+	z-index: 4;
+	width: 100%;
+	right: 0;
+	left: 0;
+	.dropdown-menu {
+		background-color: $secondary;
+		font-size: 0.9rem;
+		border: 0;
+		a:link,
+		a:visited {
+			color: white;
+		}
+	}
+}
+
+.view-category .jumbotron {
+	min-height: 350px;
+	@include media-breakpoint-down(lg) {
+		min-height: 150px;
+	}
+}
+
+.jumbotron {
+	//$jumbotron-background-color: darken($background-color, 3%);
+	$jumbotron-background-color: $background-color;
+
+	-webkit-box-shadow: -3px 36px 24px -32px rgba(0, 0, 0, 1);
+	-moz-box-shadow: -3px 36px 24px -32px rgba(0, 0, 0, 1);
+	box-shadow: -3px 36px 24px -32px rgba(0, 0, 0, 1);
+	position: relative;
+
+	.ratio-categoryView-5:before {
+		padding-top: 35%;
+	}
+
+	.title {
+		line-height: 1.2;
+		a:link,
+		a:visited {
+			color: $white;
+			text-decoration: none;
+		}
+	}
+
+	.background-right {
+		height: 100%;
+		width: 100%;
+		z-index: 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position-x: right;
+		background-position-y: center;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.background-left {
+		height: 100%;
+		width: 100%;
+		z-index: 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position-x: left;
+		background-position-y: center;
+		position: absolute;
+		top: 0;
+	}
+
+	.background-blur {
+		filter: blur(5px) brightness(50%);
+		-webkit-filter: blur(5px) brightness(50%);
+	}
+
+	.categoryView-mask {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		z-index: 1;
+		top: 0;
+	}
+
+	.categoryView-mask-linear {
+		background: $jumbotron-background-color;
+		opacity: 0.4;
+	}
+	.categoryView-mask-gradient-right {
+		background: linear-gradient(
+			280deg,
+			rgba($jumbotron-background-color, 0) 20%,
+			rgba($jumbotron-background-color, 0.5) 34%,
+			rgba($jumbotron-background-color, 1) 50%
+		);
+	}
+	.categoryView-mask-gradient-left {
+		background: linear-gradient(
+			80deg,
+			rgba($jumbotron-background-color, 0) 20%,
+			rgba($jumbotron-background-color, 0.5) 34%,
+			rgba($jumbotron-background-color, 1) 50%
+		);
+	}
+}
+.bar {
+    background: $gray;
+    height: 8px;
+    margin-bottom: 8px;
+    .color {
+        width: 40px;
+        height: 8px;
+        border-right: 1px solid $white;
+        background: $primary;
+    }
+}
+
+.bar-title {
+    margin: 7px 0px 14px;
+    h2 {
+        font-size: 1.6em;
+        margin: 0;
+        font-weight:700;
+        display:flex;
+        text-transform: none;
+        margin-left: 30px;
+        &:before {
+            color: $danger;
+            content: "";
+            font-family: Font Awesome\ 6 Free;
+            font-size: 1rem;
+            font-weight: 900;
+            padding-right: 10px;
+            margin-top:3px;
+        }
+    }
+    i {
+        margin-left: 0.5rem;
+    }
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.bar-line {
+    line-height: 1.4;
+    border-left: 4px solid $primary;
+    background: $light;
+    margin: 20px 0;
+    padding: 10px 20px;
+    * {
+        line-height: 1.2rem;
+    }
+    ul {
+        margin-bottom: 0.5rem;
+    }
+    h3 {
+        font-weight: bold;
+        font-size: 1em;
+        display: inline-block;
+        margin: 0;
+    }
+}
+
+.article-tv {
+    border-bottom: 15px solid $secondary;
+    border-radius: 0.2rem;
+    box-shadow: -3px 36px 24px -32px #000;
+    .article {
+        a {
+            &:link,
+            &:visited {
+                color: #88a6ca;
+            }
+        }
+        .details {
+            div {
+                border-right: 1px solid white;
+                padding-right: 10px;
+                margin-right: 10px;
+
+                &:last-child {
+                    border: 0;
+                }
+            }
+        }
+        .linkToMain {
+            margin-bottom: 15px;
+        }
+    }
+}

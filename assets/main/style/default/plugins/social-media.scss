@@ -1,0 +1,28 @@
+.social-media {
+   a {
+
+      &:link,
+      &:visited {
+         color: var(--bs-primary);
+      }
+
+      &:hover {
+         text-decoration: none;
+      }
+   }
+
+   ul {
+      list-style-type: none;
+      padding: 0 1rem;
+      line-height: 1;
+      margin-bottom: 0;
+
+      @include media-breakpoint-down(sm) {
+         li {
+            font-size: 1.5em
+         }
+      }
+
+
+   }
+}

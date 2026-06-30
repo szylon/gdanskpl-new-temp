@@ -1,0 +1,18 @@
+@import "./../custom-colors";
+
+$primary:  #dbd5c9;
+$secondary: #a52c24;
+$third: #001e43;
+$four: #223B86;
+
+$page-colors: (
+	"primary": $primary,
+	"secondary": $secondary,
+	"third": $third,
+	"four": $four,
+
+);
+$theme-colors: map-merge($theme-colors, $page-colors);
+
+@import "./../main";
+

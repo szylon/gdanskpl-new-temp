@@ -1,0 +1,91 @@
+// _theme-list.scss
+// Sama mapa z definicjami Twoich niestandardowych motywów (bez pętli)
+
+$my-custom-themes: (
+    "contrast": (
+        "default-primary": #f1dd01,
+        "default-secondary": #ffffff,
+
+        "primary": #f1dd01,
+        "secondary": #f1dd01,
+        "third": #f1dd01,
+        "four": #343a40,
+        "light": #343a40,
+        "gray": #f1dd01,
+        "white": #000000,
+        "yellow": #f1dd01,
+
+        "body-color": #f6f6f6,
+        "black": #ffffff,
+        "danger": #f1dd01,
+        "success": #f1dd01,
+
+        "events": #f1dd01,
+        "felieton-dark": #f1dd01,
+
+        "background-color": #000000,
+
+        // Submenu
+        "sub-menu-background-color": #343a40
+    ),
+
+    "budzet-obywatelski": (
+        "secondary": #fec20a
+    ),
+    "kultura": (
+        "primary": #640393,
+        "secondary": #e2a9f1,
+        "third": #420062
+    ),
+    "urc": (
+        "primary": #29509f,
+        "secondary": #39a8dd,
+        "third": #fdca2a
+    ),
+    "olioc": (
+        "primary": #cd171a,
+        "secondary": #dbdad8,
+        "third": #fdca2a
+    ),
+    "kultura2": (
+        "primary": #163d41,
+        "secondary": #c7e4e3,
+        "third": #699a97,
+        "events": #163d41
+    ),
+    "itd": (
+        "primary": #005ca9,
+        "secondary": #ec6608,
+        "third": #009be3
+    ),
+    "video": (
+        "primary": #002d60,
+        "secondary": #4b6788,
+        "third": #88a6ca,
+        "four": #001e43,
+        "body-color": #f6f6f6,
+        "background-color": #242735
+    ),
+    "external-calendar": (
+        "primary": #420062,
+        "secondary": #640393,
+        "third": #7a4d90
+    ),
+    "zdrowie": (
+        "primary": #876ea5,
+        "secondary": #622192,
+        "third": #ffcc00,
+        "bar-decor-color": #876ea5
+    ),
+    "gdanskie-dni-sasiedzkie": (
+        "primary": #6852a2,
+        "secondary": #f57806,
+        "background-color": #f3ebe8,
+
+        "colour-day-1": #6852a2,
+        "colour-day-2": #febaed,
+        "colour-day-3": #f57806,
+        "colour-day-4": #7fae33,
+        "colour-day-5": #fdbf03
+    )
+);

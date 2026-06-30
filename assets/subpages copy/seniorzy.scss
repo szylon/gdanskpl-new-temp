@@ -1,0 +1,472 @@
+@import "./../custom-colors";
+
+// $primary: #002d60;
+// $secondary: #4b6788;
+$third: #FFCC00;
+$four: #83b613;
+$yellow: #FFCC00;
+
+
+$page-colors: ("primary": $primary,
+	"secondary": $secondary,
+	"third": $third,
+	"yellow": $yellow,
+);
+$theme-colors: map-merge($theme-colors, $page-colors);
+
+@import "./../main";
+@import "./../plugins/events.scss";
+
+
+.seniors {
+	table tr th {
+		background: $third !important
+	}
+
+	.harmonogram-seniors {
+		display: grid;
+		grid-template-columns: 3fr auto 10fr;
+		grid-gap: 0 20px;
+		grid-template-areas: "title decor content"
+	}
+
+	@media (max-width: 600px) {
+		.harmonogram-seniors {
+			display: grid;
+			grid-template-columns: auto 1fr;
+			grid-gap: 0 20px;
+			grid-template-areas: "decor title""content content"
+		}
+	}
+
+	.harmonogram-seniors {
+		.decor {
+			grid-area: decor;
+		}
+
+		.title {
+			grid-area: title;
+			text-align: right;
+		}
+
+		.content {
+			grid-area: content;
+		}
+
+		.right {
+			height: 100%
+		}
+
+		&:nth-child(1) .decor {
+			border-left: 40px solid #FFF3B3;
+		}
+
+		&:nth-child(1) .arrow-right {
+
+			border-left-color: #FFF3B3
+		}
+
+
+		&:nth-child(2) .decor {
+			border-left: 40px solid #FFE973;
+		}
+
+		&:nth-child(2) .arrow-right {
+
+			border-left-color: #FFE973
+		}
+
+
+		&:nth-child(3) .decor {
+			border-left: 40px solid #FFD51E;
+		}
+
+		&:nth-child(3) .arrow-right {
+
+			border-left-color: #FFD51E
+		}
+
+		&:nth-child(4) .decor {
+			border-left: 40px solid #DFBB20;
+		}
+
+		&:nth-child(4) .arrow-right {
+
+			border-left-color: #DFBB20
+		}
+
+		&:nth-child(5) .decor {
+			border-left: 40px solid #575859;
+		}
+
+		&:nth-child(5) .arrow-right {
+
+			border-left-color: #575859
+		}
+
+		&:nth-child(6) .decor {
+			border-left: 40px solid #000000;
+		}
+
+		&:nth-child(6) .arrow-right {
+
+			border-left-color: #000000
+		}
+
+		.arrow-right {
+			width: 0;
+			height: 0;
+			border-top: 15px solid transparent;
+			border-bottom: 15px solid transparent;
+			border-left: 15px solid;
+		}
+	}
+}
+
+.jd_q_widgetPanel {
+	.jd_q_container {}
+
+	input {
+		height: 35px;
+		padding: 0 0.75rem;
+		color: $dark;
+		background-color: $white;
+		background-clip: padding-box;
+		border: 1px solid;
+		border-color: rgba($black, 0.125);
+		border-radius: 4px;
+	}
+
+	.jd_q_main_title {
+		display: none;
+	}
+
+	.jd_q_title {
+		height: 35px;
+		padding: 0 0.75rem;
+		color: $dark;
+		background-color: $light;
+		background-clip: padding-box;
+		border: 1px solid;
+		border-color: rgba($black, 0.125);
+		border-radius: 4px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 45px;
+
+		.gwt-Label {
+			display: none;
+		}
+	}
+
+	.jd_q_start {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 0.5rem;
+
+		.jd_q_title:after {
+			content: "A";
+		}
+
+		.jd_q_input {
+			flex-grow: 1;
+			margin-left: 1rem;
+
+			input {
+				width: 100%;
+			}
+		}
+	}
+
+	.jd_q_end {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 0.5rem;
+
+		.jd_q_title:after {
+			content: "B";
+		}
+
+		.jd_q_input {
+			flex-grow: 1;
+			margin-left: 1rem;
+
+			input {
+				width: 100%;
+			}
+		}
+	}
+
+	.jd_q_date {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 0.5rem;
+
+		.jd_q_title:after {
+			font-family: "Font Awesome 5 Free";
+			content: "\f073";
+		}
+
+		.jd_q_input {
+			flex-grow: 2;
+			margin-left: 1rem;
+
+			input {
+				width: 150px;
+				text-align: center;
+			}
+		}
+
+		.jd_q_date_prev {
+			&:hover {
+				color: $secondary;
+			}
+		}
+
+		.jd_q_date_prev:before {
+			font-family: "Font Awesome 5 Free";
+			font-weight: 900;
+			content: "\f100";
+		}
+
+		.jd_q_date_next {}
+
+		.jd_q_date_next:after {
+			font-family: "Font Awesome 5 Free";
+			font-weight: 900;
+			content: "\f101";
+		}
+	}
+
+	.jd_q_hour {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 0.5rem;
+
+		.jd_q_title:after {
+			font-family: "Font Awesome 5 Free";
+			content: "\f017";
+		}
+
+		.jd_q_input {
+			flex-grow: 2;
+			margin-left: 1rem;
+
+			input {
+				width: 150px;
+				text-align: center;
+			}
+
+			.jd_q_hour_prev {}
+
+			.jd_q_hour_prev:before {
+				font-family: "Font Awesome 5 Free";
+				font-weight: 900;
+				content: "\f100";
+			}
+
+			.jd_q_hour_next {}
+
+			.jd_q_hour_next:after {
+				font-family: "Font Awesome 5 Free";
+				font-weight: 900;
+				content: "\f101";
+			}
+		}
+	}
+
+	.jd_q_submit {
+		display: flex;
+
+		input {}
+
+		.gwt-Button {
+			color: $white;
+			background-color: $primary;
+			font-size: 0.8rem;
+			margin-left: auto;
+			margin-bottom: 1rem;
+
+			&:hover {
+				background-color: #940606;
+				color: $white;
+			}
+		}
+	}
+
+	.gwt-Button {
+		height: 35px;
+		padding: 0 0.75rem;
+		color: $primary;
+		background-color: $light;
+		background-clip: padding-box;
+		border: 1px solid;
+		border-color: rgba($black, 0.125);
+		border-radius: 4px;
+
+		&:hover {
+			color: $secondary;
+		}
+	}
+}
+
+.jd_q_suggestion {}
+
+.jd_q_suggestionSecondLine {}
+
+.jd_q_suggestionCounter {}
+
+.jd_q_stop {}
+
+.jd_q_street {}
+
+.jd_q_address {}
+
+.jd_q_crossroad {}
+
+.jd_q_poi {}
+
+.jd_q_coordinate {}
+
+.jd_q_userPoint {}
+
+.jd_suggestion {
+	padding-left: 40px;
+	background-position: left center;
+	background-repeat: no-repeat;
+	font-family: Arial Unicode MS, Arial, sans-serif;
+	font-size: small;
+}
+
+.suggestPopupTop {
+	background-color: white;
+}
+
+.suggestPopupMiddle {
+	background-color: white;
+}
+
+.suggestPopupBottom {
+	background-color: white;
+}
+
+.jd_q_suggestion {
+	color: black;
+	padding-left: 40px;
+	background-position: left center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	font-family: Arial Unicode MS, Arial, sans-serif;
+	font-size: small;
+	background-size: contain;
+}
+
+.jd_q_stop {
+	background-image: url("https://api.jakdojade.pl/api/widgets/images/busStop.png");
+	background-size: 30px 30px;
+	background-position: left top;
+}
+
+.jd_q_street {
+	background-image: url("https://api.jakdojade.pl/api/widgets/images/street.png");
+	background-size: 30px 30px;
+	background-position: left top;
+}
+
+.jd_q_address {
+	background-image: url("https://api.jakdojade.pl/api/widgets/images/streetAddress.png");
+	background-size: 30px 30px;
+	background-position: left top;
+}
+
+.jd_q_crossroad {
+	background-image: url("https://api.jakdojade.pl/api/widgets/images/crossroad.png");
+	background-size: 30px 30px;
+	background-position: left top;
+}
+
+.jd_q_poi {
+	background-image: url("https://api.jakdojade.pl/api/widgets/images/poi.png");
+	background-size: 30px 30px;
+	background-position: left top;
+}
+
+.jd_q_coordinate {
+	background-image: url("https://api.jakdojade.pl/api/widgets/images/poi.png");
+	background-size: 30px 30px;
+	background-position: left top;
+}
+
+.jd_q_userPoint {
+	background-image: url("https://api.jakdojade.pl/api/widgets/images/poi.png");
+	background-size: 30px 30px;
+	background-position: left top;
+}
+
+.jd_q_suggestionCounter {
+	font-family: Arial Unicode MS, Arial, sans-serif;
+	font-size: small;
+	color: black;
+}
+
+.gwt-SuggestBoxPopup {
+	z-Index: 9999;
+}
+
+.gwt-SuggestBoxPopup .item-selected {
+	background: none repeat scroll 0 0 #D5E2FF;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupTop {
+	background-color: transparent;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupBottom {
+	background-color: transparent;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupTopLeft {
+	background: url("https://api.jakdojade.pl/api/widgets/images/circles.png") no-repeat scroll 0 -6px transparent;
+	height: 5px;
+	width: 5px;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupTopCenter {
+	border-top: 1px solid #BBBBBB;
+	background-color: #FFFFFF;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupTopRight {
+	background: url("https://api.jakdojade.pl/api/widgets/images/circles.png") no-repeat scroll -5px -6px transparent;
+	height: 5px;
+	width: 5px;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupMiddleLeft {
+	border-left: 1px solid #BBBBBB;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupMiddleRight {
+	border-right: 1px solid #BBBBBB;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupBottomLeft {
+	background: url("https://api.jakdojade.pl/api/widgets/images/circles.png") no-repeat scroll 0 -11px transparent;
+	height: 5px;
+	width: 5px;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupBottomCenter {
+	border-bottom: 1px solid #BBBBBB;
+	background-color: #FFFFFF;
+}
+
+.gwt-SuggestBoxPopup .suggestPopupBottomRight {
+	background: url("https://api.jakdojade.pl/api/widgets/images/circles.png") no-repeat scroll -5px -11px transparent;
+	height: 5px;
+	width: 5px;
+}
+
+//version 11.09.2020//
+

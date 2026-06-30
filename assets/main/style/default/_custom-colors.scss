@@ -1,0 +1,98 @@
+$primary: #001e43;
+$secondary: #0e488f;
+$third: #034ebc;
+$four: #001e43;
+$light: #f6f6f6;
+$gray: #d7d7d7;
+$white: #fff;
+$yellow: #f1dd01;
+$black: #000000;
+$danger: #eb150d;
+$body-color: #000000;
+$background-color: #fff;
+$events: #640393;
+$felieton-dark: #242735;
+$yellow-dark: #fcc10b;
+$success: #1b9503;
+$dark: #212529;
+
+
+
+
+$link-color: $third;
+
+$component-active-bg: $primary;
+
+//Form
+$input-group-addon-bg: $light;
+
+// News ticker
+$news-ticker-accordion-button: $light;
+$news-ticker-button-bg: $light;
+$news-ticker-button-border: $gray;
+$news-ticker-label: $body-color;
+$news-ticker-label-bg: $yellow;
+
+//box
+$extra-color: $secondary;
+$extra-color-dark: $four;
+
+// Kolory niestandartowe
+$default-primary: #001e43;
+$default-secondary: #0e488f;
+
+$bar-decor-color: $danger;
+
+:root {
+    --bs-default-primary: #{$default-primary};
+    --bs-default-secondary: #{$default-secondary};
+    --bs-default-primary-rgb: #{to-rgb($default-primary)};
+    --bs-default-secondary-rgb: #{to-rgb($default-secondary)};
+
+    // DOPISZ TUTAJ SWOJE NIESTANDARDOWE KOLORY GLOBALNE:
+    --bs-gray: #{$gray};
+    --bs-gray-rgb: #{to-rgb($gray)};
+
+    --bs-yellow: #{$yellow};
+    --bs-yellow-rgb: #{to-rgb($yellow)};
+
+    --bs-events: #{$events};
+    --bs-events-rgb: #{to-rgb($events)};
+
+    --bs-success: #{$success};
+    --bs-success-rgb: #{to-rgb($success)};
+
+    --bs-bar-decor-color: #{$bar-decor-color};
+    --bs-bar-decor-color-rgb: #{to-rgb($bar-decor-color)};
+
+
+
+}
+
+// Jeśli $theme-colors nie istnieje w tym momencie, inicjalizujemy jako pustą mapę
+$theme-colors: () !default;
+
+// Teraz map-merge nigdy nie wyrzuci błędu "Undefined variable"
+$theme-colors: map-merge(
+  (
+    "default-primary": $default-primary,
+    "default-secondary": $default-secondary,
+    "primary": $primary,
+    "secondary": $secondary,
+    "third": $third,
+    "four": $four,
+    "light": $light,
+    "gray": $gray,
+    "white": $white,
+    "yellow": $yellow,
+    "black": $black,
+    "danger": $danger,
+    "body-color": $body-color,
+    "background-color": $background-color,
+    "events":        $events,
+    "yellow-dark":   $yellow-dark,
+    "felieton-dark": $felieton-dark,
+    "dark": $dark
+  ),
+  $theme-colors
+);

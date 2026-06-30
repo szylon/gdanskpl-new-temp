@@ -1,0 +1,22 @@
+@import "./../custom-colors";
+
+$primary: #001e43;
+$secondary: #17afe6;
+$third: #FFCC00;
+
+
+
+$page-colors: (
+	"primary": $primary,
+	"secondary": $secondary,
+	"third": $third,
+);
+$theme-colors: map-merge($theme-colors, $page-colors);
+
+@import "./../main";
+@import "./../plugins/events.scss";
+
+
+.gdanskie-obiekty-noclegowe {
+
+}

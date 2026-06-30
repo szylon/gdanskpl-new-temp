@@ -1,0 +1,76 @@
+app-header {
+	display: none;
+}
+
+jakdojade-planner-widget {
+	padding: 0 !important;
+	background: $white !important;
+	min-height: 0 !important;
+	min-width: 0 !important;
+	height: auto !important;
+	padding-bottom: 15px !important;
+
+	.opacity-50 {
+		opacity: 1 !important;
+		color: var(--bs-primary) !important;
+		font-weight: bold;
+	}
+
+	.point {
+		height: 35px;
+		padding: 0 0.75rem;
+		color: $dark;
+		background-color: $white;
+		background-clip: padding-box;
+		border: 1px solid $gray;
+		border-radius: 2px !important;
+		box-shadow: none !important;
+	}
+
+	.search-connection-button {
+		border: 1px solid $gray !important;
+		background: $light !important;
+
+		&:hover {
+			background-color: var(--bs-primary) !important;
+			color: $white !important;
+
+			.search-connection-button--text {
+				color: $white;
+			}
+		}
+
+		.search-connection-button--text {
+			color: var(--bs-primary);
+		}
+	}
+
+	.switch-small {
+		background-color: var(--bs-primary) !important;
+	}
+
+	.search-type--slider-text,
+	.date-picker,
+	.control-panel,
+	.control-panel--box {
+		color: $dark !important;
+	}
+
+	.control-panel--box {
+		border: 1px solid $gray !important;
+	}
+
+	.date-picker--arrow-left,
+	.time-picker--arrow-left,
+	.date-picker--arrow-right,
+	.time-picker--arrow-right {
+		background: url(https://download.cloudgdansk.pl/gdansk-pl/images/jakdojade-arrow.svg) !important;
+	}
+
+	.point--indicator-end,
+	.point--indicator-start {
+		background: none !important;
+		border: 4px solid var(--bs-primary);
+		border-radius: 50%;
+	}
+}

@@ -1,0 +1,432 @@
+.strategia {
+	.owl-carousel .owl-item img {
+		display: block;
+		width: auto;
+		margin: 0 auto;
+	}
+
+	.range-of-activity {
+		img {
+			width: 50%;
+		}
+
+		.thumb {
+			margin-top: 30px;
+		}
+	}
+
+	.intro .article-content p {
+		color: $white !important;
+	}
+
+	.strategy-statistic .thumb .card,
+	.range-of-activity .thumb .card {
+		overflow: visible !important;
+
+		.col {
+			transition: transform 0.3s ease-in-out;
+		}
+
+		.col:hover {
+			transform: scale(1.28);
+		}
+	}
+
+	.strategy-statistic {
+		.content p {
+			font-weight: bold;
+			font-size: 6em;
+			color: var(--bs-primary);
+			line-height: 0.7em;
+		}
+
+		.thumb {
+			margin-top: 30px;
+		}
+
+		.content p sub {
+			font-size: 0.3em;
+			bottom: 0;
+		}
+	}
+
+	.bar-title h2:before {
+		color: var(--bs-primary);
+	}
+
+	.list {
+		font-size: 1.2em;
+
+		a:link,
+		a:visited {
+			color: var(--bs-primary);
+		}
+	}
+
+	.btn-secondary:hover small {
+		display: block !important;
+	}
+
+	.thumb .summary {
+		font-size: 1.4rem;
+	}
+
+	// Lista proces powstawania - gdansk.pl/new/strategia-rozwoju-miasta-gdansk-2030/strategia/Zmiana-Strategii-Rozwoju-Miasta,a,207007
+
+	.list-procces-container {
+		counter-reset: list-counter;
+
+		.article-foto img {
+			border: 3px dotted var(--bs-primary);
+			border-radius: 20px;
+			padding: 15px;
+			transition: all 0.2s ease-in-out;
+			margin-bottom: 80px;
+		}
+
+		.article-foto img:hover {
+			transform: scale(1.08);
+		}
+
+		ol {
+			padding: 0 5%;
+
+			li {
+				color: $white;
+				position: relative;
+				list-style: none;
+				display: flex;
+				flex-direction: column;
+				padding: 0 30px;
+
+				// Nieparzyste
+				&:nth-child(odd) {
+					max-width: 80%;
+					margin-left: 20%;
+					flex-direction: row !important;
+					width: 100%;
+					flex-wrap: wrap;
+				}
+
+				&:nth-child(odd):before {
+					counter-increment: list-counter;
+					content: counter(list-counter) "";
+					color: #005c97;
+					font-size: 3rem;
+					font-weight: bolder;
+					margin-top: -50px;
+					margin-bottom: 30px;
+					width: 120px;
+					height: 120px;
+					margin-right: -60px;
+					z-index: 5;
+					text-align: center;
+					background-image: url("https://gdansk.pl/images/strategia-plus-border.svg");
+					background-size: contain;
+					background-repeat: no-repeat;
+
+					/* Flexbox to center content */
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					/* Additional styling */
+					flex: 0 1 auto;
+					align-self: flex-start !important;
+				}
+
+				&:nth-child(odd) span {
+					background-color: #005c97;
+					flex: 1 1 0;
+					/* Zajmuje resztę miejsca */
+					padding: 10px 20px 10px 40px;
+					text-align: center;
+					z-index: 2;
+					border-radius: 20px;
+					color: #ffffff !important;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+
+				&:nth-child(odd) div {
+					flex-basis: 100%;
+					/* Zajmuje 100% szerokości na dole */
+					color: var(--bs-primary);
+					border-bottom: 3px dotted;
+					border-top: 3px dotted;
+					border-right: 3px dotted;
+					border-bottom-right-radius: 20px;
+					border-top-right-radius: 20px;
+					height: 105px;
+					margin: -40px -20px -40px 70%;
+					z-index: 1;
+				}
+
+				// Parzyste
+				&:nth-child(even) {
+					max-width: 80%;
+					margin-right: 20%;
+					flex-direction: row !important;
+					width: 100%;
+					text-align: center;
+					margin-bottom: 30px;
+					flex-wrap: wrap;
+				}
+
+				&:nth-child(even):before {
+					counter-increment: list-counter;
+					content: counter(list-counter) "";
+					color: #e41526;
+					font-size: 3rem;
+					font-weight: bolder;
+					top: auto;
+					bottom: auto;
+					padding: 0 20px;
+					order: 2 !important;
+					z-index: 4;
+					flex: 0 1 auto;
+					align-self: flex-start !important;
+					background: #ffffff;
+					border-radius: 20px;
+				}
+
+				&:nth-child(even) span {
+					order: 1 !important;
+					flex: 1 1 0;
+					/* Zajmuje resztę miejsca */
+					background-color: #e41526;
+					padding: 10px 20px;
+					z-index: 4;
+					border-radius: 20px;
+					color: #ffffff !important;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					min-height: 100px;
+				}
+
+				&:nth-child(even) div {
+					flex-basis: 100%;
+					/* Zajmuje 100% szerokości na dole */
+					color: var(--bs-primary);
+					border-top: 3px dotted;
+					border-bottom: 3px dotted;
+					border-left: 3px dotted;
+					border-bottom-left-radius: 20px;
+					border-top-left-radius: 20px;
+					order: 3;
+					width: 100%;
+					display: block;
+					height: 105px;
+					margin: -40px 70% -40px -20px;
+				}
+
+				&:last-child div {
+					display: none;
+				}
+
+				& span {
+					transition: all 0.2s ease-in-out;
+				}
+
+				& span:hover {
+					transform: scale(1.08);
+				}
+			}
+		}
+	}
+
+	#strategia,
+	#programy-rozwoju {
+		.dropdown-menu {
+			border: 0;
+			background: transparent;
+		}
+
+		.btn-group > .show img {
+			filter: blur(4px);
+			transform: scale(0.7);
+			opacity: 0.3;
+		}
+
+		.btn-group ul.show {
+			transform: translate(-50%, -50%) !important;
+			padding: 25% auto;
+			top: 50% !important;
+			left: 50% !important;
+			text-align: center;
+		}
+	}
+}
+
+:root {
+	// Łatwo dostrajane czasy
+	--scale-duration: 320ms;
+	--scale-ease: ease-in-out;
+
+	--panel-fade-duration: 260ms;
+	--panel-fade-delay-in: 140ms; // kiedy kursor wchodzi
+	--panel-fade-delay-out: 0ms; // kiedy kursor wychodzi
+}
+
+// Kolory tematyczne (dla ułatwienia w SCSS)
+$zielone-miasto-color: #16a95d;
+$wspolne-miasto-color: #38b6ff;
+$dostepne-miasto-color: #cb6ce6;
+$innowacyjne-miasto-color: #ff914d;
+
+.rotate-panel {
+	position: relative;
+	overflow: hidden;
+	transition: height 280ms ease;
+	margin: 1px auto;
+
+	.headingImg {
+		position: relative;
+		z-index: 1;
+
+		&-inner {
+			transition: transform var(--scale-duration) var(--scale-ease);
+			transform-origin: center center;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+
+		.overlay {
+			height: 100%;
+			position: absolute;
+			width: 100%;
+			transition: 0.3s ease-in-out;
+			z-index: 0;
+		}
+
+		.overlay-text {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			right: 0;
+			transform: translateY(-50%);
+			text-align: center;
+			color: $white;
+			font-weight: 600;
+			z-index: 0;
+			text-shadow: 1px 1px 1px #000;
+		}
+	}
+
+	&:hover {
+		.headingImg-inner {
+			transform: scale(0);
+		}
+
+		.content-item {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+			overflow: hidden;
+			transition:
+				opacity var(--panel-fade-duration) ease var(--panel-fade-delay-in),
+				visibility 0s linear var(--panel-fade-delay-in);
+		}
+	}
+
+	.content-item {
+		position: absolute;
+		inset: 0;
+		background: $light;
+		padding: 24px 24px 54px 24px;
+		overflow: auto;
+		display: block;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		margin-top: 30px;
+		z-index: 2;
+		transition:
+			opacity var(--panel-fade-duration) ease var(--panel-fade-delay-out),
+			visibility 0s linear var(--panel-fade-delay-out);
+	}
+
+	// Tematy kolorystyczne
+
+	&.zielone-miasto {
+		.bar-title {
+			.h2:before,
+			h2:before {
+				color: $zielone-miasto-color !important;
+			}
+		}
+
+		.headingImg {
+			.overlay {
+				background: rgba($zielone-miasto-color, 0.25) !important;
+			}
+		}
+
+		.content-item {
+			border-top: 30px solid $zielone-miasto-color;
+		}
+	}
+
+	&.wspolne-miasto {
+		.bar-title {
+			.h2:before,
+			h2:before {
+				color: $wspolne-miasto-color !important;
+			}
+		}
+
+		.headingImg {
+			.overlay {
+				background: rgba($wspolne-miasto-color, 0.25) !important;
+			}
+		}
+
+		.content-item {
+			border-top: 30px solid $wspolne-miasto-color;
+		}
+	}
+
+	&.dostepne-miasto {
+		.bar-title {
+			.h2:before,
+			h2:before {
+				color: $dostepne-miasto-color !important;
+			}
+		}
+
+		.headingImg {
+			.overlay {
+				background: rgba($dostepne-miasto-color, 0.25) !important;
+			}
+		}
+
+		.content-item {
+			border-top: 30px solid $dostepne-miasto-color;
+		}
+	}
+
+	&.innowacyjne-miasto {
+		.bar-title {
+			.h2:before,
+			h2:before {
+				color: $innowacyjne-miasto-color !important;
+			}
+		}
+
+		.headingImg {
+			.overlay {
+				background: rgba($innowacyjne-miasto-color, 0.25) !important;
+			}
+		}
+
+		.content-item {
+			border-top: 30px solid $innowacyjne-miasto-color;
+		}
+	}
+}

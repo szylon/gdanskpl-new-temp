@@ -1,0 +1,42 @@
+$link-hover-decoration: none;
+$border-radius: 0.2rem;
+$border-radius-lg: 0.2rem;
+$border-radius-sm: 0.2rem;
+$breadcrumb-bg: transparent;
+$breadcrumb-padding-y: 0;
+$breadcrumb-padding-x: 0;
+$table-head-bg: $light;
+$dropdown-link-hover-bg: $primary;
+$dropdown-link-hover-color: $white;
+$navbar-nav-link-padding-x: 0.75rem;
+$navbar-nav-link-padding-y: 0.75rem;
+$navbar-light-active-color: $white;
+$navbar-padding-y: 0;
+$navbar-padding-x: 0;
+$grid-gutter-width: 1rem;
+
+$font-family-sans-serif: "Kanit", sans-serif;
+$primary-font-family: "Kanit", sans-serif;
+$secondary-font-family: "Ubuntu", sans-serif;
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 500;
+$font-weight-bolder: 700;
+
+$container-max-widths: ();
+
+$container-max-widths: map-merge(
+    (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1280px,
+    ),
+    $container-max-widths
+);
+// $table-accent-bg: rgba($black, 0.05);
+// $table-hover-bg: rgba($primary, 0.13);
+$table-border-color: $white;
+// $table-bg: $light;
+$table-naglowek: $gray;

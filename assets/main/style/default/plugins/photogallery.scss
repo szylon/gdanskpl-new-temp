@@ -1,0 +1,289 @@
+$background-color: #242735;
+// $photogallery-subpage-theme-border: #696969;
+
+#photogallery-subpage {
+
+    .article * {
+        color: var(--bs-light) !important;
+    }
+
+    .h1-breadcrumb {
+        font-size: var(--bs-breadcrumb-font-size) !important;
+        font-weight: var(--bs-body-font-weight) !important;
+        line-height: var(--bs-body-line-height) !important;
+    }
+
+    .w-auto {
+        width: auto;
+    }
+
+    .hmin-277 {
+        min-height: 277px;
+    }
+
+    .hmax-80-vh {
+        max-height: 80vh !important;
+    }
+
+    .hmax-90-vh {
+        max-height: 90vh !important;
+    }
+
+    .hmax-533 {
+        max-height: 533px;
+    }
+
+    .fs-small {
+        font-size: 0.85rem;
+    }
+
+    .ellipsis {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap !important;
+    }
+
+    .ellipsis-w {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        box-orient: vertical;
+        overflow: hidden;
+    }
+
+    @for $i from 2 through 3 {
+        .lc-#{$i} {
+            -webkit-line-clamp: $i;
+            line-clamp: $i;
+        }
+    }
+
+    @each $value in 0,
+    25,
+    50,
+    75,
+    100 {
+        .opacity-#{$value}-hover:hover {
+            opacity: $value * 0.01 !important;
+        }
+    }
+
+    @each $value in 0,
+    25,
+    50,
+    75,
+    100 {
+        .bg-opacity-#{$value}-hover:hover {
+            --bs-bg-opacity: #{$value * 0.01} !important;
+        }
+    }
+
+    .bg-gray-700 {
+        background-color: var(--bs-gray-700) !important;
+    }
+
+    .bg-gray-800 {
+        background-color: var(--bs-gray-800) !important;
+    }
+
+    .pointer {
+        cursor: pointer;
+    }
+
+    .show {
+        .hide {
+            display: block;
+            opacity: 0.5;
+            z-index: 10;
+            transition: opacity 0.2s ease-in-out;
+        }
+
+        @media (hover: hover) {
+            .hide {
+                display: none;
+                opacity: 0.8;
+            }
+
+            &:hover .hide {
+                display: block;
+            }
+        }
+    }
+
+    .scale-hover {
+        position: relative;
+        transform-origin: center;
+        isolation: isolate;
+
+        &:hover img {
+            border: 2px solid $secondary;
+        }
+
+        &:hover {
+            z-index: 1000;
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
+            z-index: 999999;
+        }
+    }
+
+    .scroll-mt {
+        scroll-margin-top: 1.5rem;
+    }
+
+    .album-header-container {
+        background-color: $photogallery-subpage-theme-bg;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        min-height: 250px;
+    }
+
+    .album-header-background {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 66%;
+        background-size: cover;
+        background-position: top 33% right;
+        z-index: 101;
+
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 50%);
+        mask-image: linear-gradient(to right, transparent 0%, black 50%);
+    }
+
+    .album-header-txt {
+        position: relative;
+        z-index: 102;
+        width: 75%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        box-sizing: border-box;
+    }
+
+    @media (max-width: 768px) {
+        .album-header-container {
+            display: block;
+            min-height: auto;
+        }
+
+        .album-header-txt {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .album-header-background {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+
+            -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+            mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+        }
+    }
+
+    .photo-card-img {
+        min-width: 100% !important;
+    }
+
+    .placeholder-img {
+        width: 1280;
+        min-width: 202px;
+        height: 853;
+        min-height: 134px;
+    }
+
+    .img-thumbnail-list {
+        margin: 0;
+        padding: 0 !important;
+        background-color: var(--bs-body-bg);
+        border: none !important;
+        border-radius: 0;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .img-thumbnail-list-selected {
+        margin: 0;
+        padding: 0.25rem !important;
+        border: 1px solid #f8f9fa !important;
+        border-radius: 6px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .placeholder-thumbnail-album {
+        min-width: 202px;
+        min-height: 134px;
+    }
+
+    .placeholder-thumbnail-album-big {
+        width: 100%;
+        height: auto;
+        min-width: 404px;
+        min-height: 268px;
+    }
+
+    .placeholder-thumbnail-photo {
+        min-width: 152px;
+        min-height: 104px;
+    }
+
+    .breadcrumb {
+        --bs-breadcrumb-divider-color: var(--bs-light-color);
+    }
+
+    option[value='reset'] {
+        font-weight: bold;
+        color: var(--bs-primary);
+    }
+
+    .grid-album-gallery {
+        display: grid;
+        --max-cols: 6;
+        grid-template-columns: repeat(var(--max-cols), 1fr);
+        grid-auto-flow: row dense;
+        gap: 5px;
+    }
+
+    .grid-album-big {
+        grid-column: span 2 !important;
+        grid-row: span 2 !important;
+    }
+
+    @media (max-width: 575.98px) {
+        .grid-album-gallery {
+            --max-cols: 3;
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 991.98px) {
+        .grid-album-gallery {
+            --max-cols: 4;
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .grid-album-gallery {
+            --max-cols: 5;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .grid-album-gallery {
+            --max-cols: 6;
+        }
+    }
+
+    .grid-album-card {
+        will-change: transform;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+}

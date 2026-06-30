@@ -1,0 +1,13 @@
+@import "./../custom-colors";
+
+$primary: #31539a;
+
+
+
+
+$page-colors: ("primary": $primary);
+$theme-colors: map-merge($theme-colors, $page-colors);
+
+@import "./../main";
+
+.gdansk-wybiera-zdrowie {}

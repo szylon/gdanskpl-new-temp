@@ -1,0 +1,30 @@
+// _theme-generator.scss
+
+@each $name, $map in $my-custom-themes {
+    // Standardowe przypisanie zmiennych do root:
+    :root[data-bs-theme="#{$name}"] {
+        @each $key, $value in $map {
+            --bs-#{$key}: #{$value};
+            --bs-#{$key}-rgb: #{to-rgb($value)};
+            --bs-#{$key}-hover: #{shade-color($value, $btn-hover-bg-shade-amount)};
+            --bs-#{$key}-active: #{shade-color($value, $btn-active-bg-shade-amount)};
+        }
+    }
+
+    // WYMUSZENIE WYSOKIEJ SPECYFICZNOŚCI DLA KLAS SYSTEMOWYCH (np. bg-gray, bg-success)
+    // Podwójny selektor atrybutu daje nam gwarancję nadpisania narzędzi Bootstrapa
+    :root[data-bs-theme="#{$name}"][data-bs-theme="#{$name}"] {
+        @each $key, $value in $map {
+            .bg-#{$key} {
+                background-color: var(--bs-#{$key}) !important;
+            }
+            .text-#{$key} {
+                color: var(--bs-#{$key}) !important;
+            }
+            .text-bg-#{$key} {
+                background-color: var(--bs-#{$key}) !important;
+                color: #{color-contrast($value)} !important;
+            }
+        }
+    }
+}

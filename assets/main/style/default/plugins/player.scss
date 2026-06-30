@@ -1,0 +1,13 @@
+.video-js {
+   border-radius: $border-radius;
+}
+.player {
+   iframe,
+   video,
+   .video-js {
+      border-radius: $border-radius;
+   }
+}
+.vjs-poster {
+   background-size: cover;
+}

@@ -1,0 +1,58 @@
+.vignette {
+
+   .search-wrapper {
+      position: relative;
+      width: 100%;
+
+      .fa-magnifying-glass {
+         position: absolute;
+         top: 50%;
+         left: 15px;
+         transform: translateY(-50%);
+         color: var(--bs-secondary);
+         pointer-events: none;
+      }
+
+      input {
+         padding-left: 40px;
+         /* żeby nie zasłonić tekstu przez ikonę */
+      }
+   }
+
+   a {
+
+      &:link,
+      &:visited {
+         color: var(--bs-default-primary);
+      }
+
+      &:hover {
+         text-decoration: none;
+      }
+   }
+
+   .logo {
+      img {
+         height: 35px;
+
+         @include media-breakpoint-up(lg) {
+            height: 55px;
+         }
+      }
+
+      img.default {
+         display: block;
+      }
+
+      img.white {
+         display: none;
+      }
+
+      h1 {
+         margin: 0px;
+         padding: 0px;
+         font-size: 1rem;
+         font-weight: 400;
+      }
+   }
+}

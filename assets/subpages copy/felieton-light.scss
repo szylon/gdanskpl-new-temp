@@ -1,0 +1,30 @@
+@import "./../custom-colors";
+
+$primary: #242735;
+$secondary: #13354e;
+$third: #4b6788;
+$four: #001e43;
+
+$body-color: #242735;
+$background-color: #ffffff;
+
+$page-colors: ("primary": $primary,
+	"secondary": $secondary,
+	"third": $third);
+$theme-colors: map-merge($theme-colors, $page-colors);
+
+@import "./../main";
+@import "./../plugins/article-felieton.scss";
+
+.felieton {
+	.owl-carousel {
+
+		.owl-nav {
+
+			.carousel-control-next-icon,
+			.carousel-control-prev-icon {
+				filter: brightness(0)
+			}
+		}
+	}
+}

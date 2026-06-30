@@ -1,0 +1,142 @@
+@import "./../custom-colors";
+
+$default-primary:           #2D1A3A;
+
+$primary: #420062;
+$secondary: #640393;
+$third: #7a4d90;
+
+$page-colors: (
+	"default-primary": $default-primary,
+	"primary": $primary,
+	"secondary": $secondary,
+	"third": $third,
+	"light": $light
+);
+$theme-colors: map-merge($theme-colors, $page-colors);
+
+@import "./../main";
+
+.events {
+	.bar-title h2::before {
+		color: $secondary;
+	}
+
+	.menu-wydarzenia li::before {
+		color: $secondary;
+		content: "\f0c8";
+		font-family: Font Awesome\6 Free;
+		font-size: 1rem;
+		font-weight: 900;
+		margin-top: 3px;
+		padding-right: 10px;
+	}
+	.sub-menu .navbar .title:before {
+		color: $secondary;
+	}
+	.form-check-input:checked {
+		background-color: $primary;
+		border-color: $primary;
+	}
+
+	.thumb .maska img {
+		filter: saturate(120%) contrast(103%) brightness(105%);
+	}
+
+	.btn.disabled {
+		opacity: 1;
+	}
+
+	.article .event-details {
+		.btn-light {
+			background: $white;
+		}
+		.btn-light.disabled {
+			border: 1px solid $gray;
+		}
+	}
+	.dark-box {
+		.bar-title h2 {
+			justify-content: center;
+			font-size: 2rem;
+			padding-bottom: 0.5rem;
+			padding-top: 0.5rem;
+			&:before {
+				display: none;
+			}
+		}
+
+		.btn-light {
+			background: #f6f6f650;
+			color: $white;
+		}
+	}
+	.parallax .overlay {
+		background: $primary;
+	}
+	.special-thumb .thumb {
+		background: $primary;
+	}
+
+	.thumb {
+		.maska img {
+			filter: saturate(120%) contrast(103%) brightness(105%);
+		}
+	}
+	.calendar {
+		background: $light;
+		.thumb {
+			.card {
+				background: $white;
+				border: 1px solid $gray;
+				.card-body {
+					padding: 0.5rem 0.5rem 0 0.5rem;
+				}
+				.card-title {
+					font-size: 1rem;
+				}
+				.card-footer {
+					background-color: transparent;
+					border-top: 0;
+					padding: 0 0.5rem 0.5rem 0.5rem;
+				}
+				.list-group {
+					font-size: 0.9rem;
+					font-weight: 400;
+				}
+				.list-group-item {
+					background-color: transparent;
+					color: $white;
+				}
+			}
+		}
+	}
+}
+
+.event-details span {
+	font-weight: 600;
+	margin-right: 5px;
+	min-width: 100px;
+}
+
+a:not(.btn):link,
+a:not(.btn):visited {
+	color: $secondary;
+}
+
+.article-content {
+	blockquote {
+		border-left: 5px solid $secondary;
+	}
+	.article-foto {
+		display: grid;
+		grid-template-columns: minmax(auto, 800px); 
+		grid-auto-rows: auto; /* Szerokość następnych wierszy jak pierwszy wiersz */
+		justify-content:center;
+	}
+	.article-foto p {
+		background:$light !important;
+		margin:0;
+		padding:5px 10px;
+	}
+}

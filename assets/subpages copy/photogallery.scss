@@ -1,0 +1,22 @@
+@import "./../custom-colors";
+
+$primary: #002d60;
+$secondary: #4b6788;
+$third: #88a6ca;
+$four: #001e43;
+$photogallery-subpage-theme-bg: #242735;
+$photogallery-subpage-theme-border: #696969;
+
+$body-color: #f6f6f6;
+$background-color: #242735;
+
+$page-colors: (
+	"primary": $primary,
+	"secondary": $secondary,
+	"third": $third
+);
+
+$theme-colors: map-merge($theme-colors, $page-colors);
+
+@import "./../main";
+@import "./../plugins/photogallery.scss";

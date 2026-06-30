@@ -1,0 +1,15 @@
+@import "./../custom-colors";
+
+$primary: #e4530f;
+$secondary: #ed2434;
+
+
+$page-colors: (
+	"primary": $primary,
+	"secondary": $secondary,
+
+);
+$theme-colors: map-merge($theme-colors, $page-colors);
+
+@import "./../main";
+@import "./../plugins/strategia.scss";

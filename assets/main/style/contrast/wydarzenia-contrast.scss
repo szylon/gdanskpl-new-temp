@@ -1,0 +1,16 @@
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+@import "./custom-colors";
+@import "./../default/custom-variables";
+@import "./../default/plugins/events";
+
+.events {
+    .extra-box {
+        background: #000000 !important;
+    }
+    .parallax .overlay {
+        background: #000000;
+        opacity:.7 !important;
+    }
+}

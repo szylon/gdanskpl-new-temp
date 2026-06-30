@@ -1,0 +1,322 @@
+@import "./../custom-colors";
+
+$primary: #6852a2;
+$secondary: #f57806;
+$background-color: #f3ebe8;
+
+$colour-day-1: #6852a2;
+$colour-day-2: #febaed;
+$colour-day-3: #f57806;
+$colour-day-4: #7fae33;
+$colour-day-5: #fdbf03;
+
+
+
+$page-colors: ("primary": $primary,
+	"secondary": $secondary,
+	"background-color":$background-color,
+	"colour-day-1": $colour-day-1,
+	"colour-day-2": $colour-day-2,
+	"colour-day-3": $colour-day-3,
+	"colour-day-4": $colour-day-4,
+	"colour-day-5": $colour-day-5);
+
+
+
+$theme-colors: map-merge($theme-colors, $page-colors);
+
+
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+
+
+$accordion-border-radius:0;
+
+@import "./../main";
+
+
+
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+
+
+.gdanskie-dni-sasiedzkie {
+	background: transparent;
+
+	main {
+		background-color: $background-color;
+
+		@include media-breakpoint-down(sm) {
+			margin-top: 16px;
+		}
+
+		// Logo
+		svg.logo-pkgm {
+			width: 340px;
+
+			@include media-breakpoint-down(sm) {
+				width: 270px;
+			}
+
+			.logo-pkgm-fill {
+				fill: $black;
+			}
+		}
+
+		.arrow-day::before {
+			content: "";
+			display: inline-block;
+			width: 96px;
+			height: 17px;
+			background-image: url('https://download.cloudgdansk.pl/gdansk-pl/s/gdanskie-dni-sasiedzkie/arrow-day.svg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			margin-right: 12px;
+		}
+
+
+		.jak-zorganizowac {
+			.thumb .card {
+				font-weight: 400 !important;
+			}
+
+			.content {
+				font-size: 1.4rem;
+
+				ol {
+					list-style: none;
+					counter-reset: my-counter;
+					padding-left: 0;
+
+					li {
+						counter-increment: my-counter;
+						margin-bottom: 1.8rem;
+						position: relative;
+						padding-left: calc(4.5rem + 15px); // Miejsce na kwadrat + 15px odstępu
+						min-height: 4.5rem;
+
+						// Kolory co 5 elementów
+						@for $i from 1 through 5 {
+							$color-map-download: (1: $colour-day-5,
+									2: $colour-day-2,
+									3: $colour-day-4,
+									4: $colour-day-3,
+									5: $colour-day-5);
+
+							&:nth-child(5n + #{$i}):before {
+								content: counter(my-counter);
+								position: absolute;
+								left: 0;
+								top: 50%;
+								transform: translateY(-50%);
+								background: map-get($color-map-download, $i);
+								font-weight: 800;
+								font-size: clamp(1.5rem, 4vw + 1rem, 3rem);
+								width: 4.5rem;
+								height: 4.5rem;
+								box-sizing: border-box;
+								padding: 15px;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+							}
+						}
+					}
+				}
+			}
+
+		}
+
+		/* Navbar */
+		.menu-top-pkgm {
+			.navbar {
+				transition: all 0.3s ease;
+				padding: 0;
+
+				.show {
+					.navbar-nav {
+						li {
+							padding: 16px 0;
+							border-bottom: 1px solid $primary;
+
+							.nav-link {
+								width: 100%;
+								font-weight: 500;
+
+							}
+						}
+					}
+				}
+			}
+
+
+			ul {
+				font-size: 1rem;
+
+				@media (max-width: 768px) {
+					font-size: 40px;
+					line-height: 1;
+					font-variant-numeric: lining-nums proportional-nums;
+				}
+			}
+
+			.offcanvas-header {
+				border-bottom: 1px solid $primary;
+			}
+
+			.nav-link {
+
+				i {
+					display: none;
+				}
+
+				&:hover {
+					text-decoration: none;
+
+					i {
+						display: block;
+						position: absolute;
+						margin-left: -16px;
+						color: $primary !important;
+					}
+				}
+
+				&.active i {
+					display: block;
+					position: absolute;
+					margin-left: -16px;
+					color: $primary !important;
+				}
+			}
+
+			.offcanvas {
+				background: $colour-day-1;
+			}
+		}
+
+
+
+		h1 {
+			font-size: 100px;
+			line-height: 1;
+
+			@include media-breakpoint-between(sm, md) {
+				font-size: 75px;
+			}
+
+			@include media-breakpoint-down(sm) {
+
+				font-size: 56px
+			}
+		}
+
+		
+
+
+		
+
+
+		
+
+		
+
+
+
+		.article-content {
+
+			p,
+			span:not(a span) {
+				color: $primary !important;
+				line-height: 1.5;
+			}
+		}
+
+		.nav-link {
+			font-weight: 600;
+		}
+
+		.bar-title {
+
+
+			.h2,
+			h2 {
+				text-transform: none;
+				font-size: 60px;
+				font-weight: 500;
+				line-height: 1;
+				margin-bottom: 3rem;
+
+				@include media-breakpoint-between(sm, md) {
+					font-size: 50px;
+				}
+
+				@include media-breakpoint-down(sm) {
+
+					font-size: 40px;
+
+				}
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+
+		.dark-box a:link,
+		.dark--box a:visited {
+			color: $colour-day-1;
+			text-decoration: none;
+		}
+
+		.light-box a:link,
+		.light-box a:visited {
+			text-decoration: none;
+		}
+
+		.text-bg-colour-day-1,
+		.text-bg-colour-day-2,
+		.text-bg-colour-day-3,
+		.text-bg-colour-day-4,
+		.text-bg-colour-day-5 {
+
+			&.dark-box {
+				color: $colour-day-1 !important;
+
+			}
+
+			&.light-box {
+				color: $primary !important;
+
+			}
+
+		}
+
+		hr {
+			opacity: 1
+		}
+
+		.bar-title h2:before {
+			color: $primary;
+		}
+
+		.list {
+			font-size: 1.2em;
+
+			a:link,
+			a:visited {
+				color: $primary;
+
+			}
+		}
+
+		.btn-secondary:hover small {
+			display: block !important;
+		}
+
+		.thumb .summary {
+			font-size: 1.4rem;
+		}
+	}
+}

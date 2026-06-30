@@ -1,0 +1,10 @@
+.info {
+    background-color: var(--bs-light);
+    border: 1px solid var(--bs-gray);
+    border-radius: $border-radius;
+    padding: 20px;
+    font-size: 0.9rem;
+    img {
+        width: 80px;
+    }
+}

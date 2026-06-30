@@ -1,0 +1,12 @@
+// _subpage-base-imports.scss
+// Podstawowe importy dla plików SCSS podstron
+
+@import "~bootstrap/scss/functions"; // 1. Rdzeń funkcji Bootstrapa
+@import "~bootstrap/scss/variables"; // 2. Zmienne Bootstrapa
+@import "~bootstrap/scss/maps";      // 3. Budowanie bazowych map (w tym oryginalnego $theme-colors)
+
+@import "../custom-colors";          // 4. Bezpieczne wstrzyknięcie Twoich kolorów do $theme-colors
+@import "../theme-list";             // 5. Mapa motywów
+
+@import "~bootstrap/scss/mixins";    // 6. Miksy i narzędzia Bootstrapa
+@import "~bootstrap/scss/utilities"; // 7. Narzędzia

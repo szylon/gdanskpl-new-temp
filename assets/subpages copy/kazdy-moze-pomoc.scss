@@ -1,0 +1,13 @@
+@import "./../custom-colors";
+
+$primary: #b22e31;
+$secondary: #4a6f31;
+
+
+
+$page-colors: ("primary": $primary,
+	"secondary": $secondary);
+$theme-colors: map-merge($theme-colors, $page-colors);
+
+@import "./../main";
+

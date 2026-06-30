@@ -1,0 +1,31 @@
+/*! purgecss start ignore */
+@import "nuevo-plugin-videojs/videojs/components/skins/nuevo/videojs";
+
+.externalIframe,
+.externalIframe iframe {
+    height: 100%;
+    width: 100%;
+}
+.vjs-poster {
+    background-size: cover;
+    img {
+        width: 100%;
+        &:hover {
+            border: 1px solid;
+        }
+    }
+}
+
+.vjs-ended {
+    .vjs-poster {
+        opacity: 1;
+    }
+    .vjs-replay-button {
+        display: none;
+    }
+}
+#short .vjs-big-play-button {
+    display: none;
+}
+
+/*! purgecss end ignore */

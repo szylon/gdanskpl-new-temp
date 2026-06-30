@@ -1,0 +1,94 @@
+.bar {
+    background: $gray;
+    height: 8px;
+    margin-bottom: 8px;
+
+    .color {
+        width: 40px;
+        height: 8px;
+        border-right: 1px solid $white;
+        background: var(--bs-primary);
+    }
+}
+
+.bar-title {
+    margin: 7px 0px 14px;
+
+    h2:has(a:hover) {
+        &:before {
+            content: "\f08e";
+        }
+    }
+    h2 {
+        font-size: 1.3em;
+        margin: 0;
+        font-weight: 700;
+        display: flex;
+        text-transform: uppercase;
+
+        &:before {
+            color: var(--bs-bar-decor-color);
+            content: "\f0c8";
+            font-family: "Font Awesome 6 Free";
+            font-size: 0.9em;
+            font-weight: 900;
+            margin-right: 10px;
+            margin-top: auto;
+            margin-bottom: auto;
+            width: 1.2em;
+        }
+    }
+
+    i {
+        margin-left: 0.5rem;
+    }
+
+    a {
+        color: $body-color;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.bar-line {
+    line-height: 1.4;
+    border-left: 4px solid var(--bs-primary);
+    background: $light;
+    margin: 20px 0;
+    padding: 10px 20px;
+
+    * {
+        line-height: 1.2rem;
+    }
+
+    ul {
+        margin-bottom: 0.5rem;
+    }
+
+    h3 {
+        font-weight: bold;
+        font-size: 1em;
+        display: inline-block;
+        margin: 0;
+    }
+}
+
+#menu-glowne {
+    .bar-title {
+        color: white;
+        margin: 0px 15px 10px;
+        border-bottom: 1px solid #ffffff80;
+
+        h2 {
+            font-size: 1rem;
+            font-weight: 400;
+            padding-bottom: 5px;
+
+            &:before {
+                margin-top: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+#accordion {
+      .card {
+            border: 1px solid $gray;
+            margin-bottom: 4px;
+            .card-body {
+                  h3 {
+                        font-size: 1.4rem;
+                  }
+                  h4 {
+                        font-size: 1.1rem;
+                  }
+            }
+      }
+      .card-header {
+            padding: 0.25rem 1.25rem;
+            background-color: $light;
+            border: 0;
+            .btn {
+                  font-size: 1.1rem;
+            }
+            .btn-link {
+                  color: $body-color;
+                  &.focus,
+                  &:focus,
+                  &:hover {
+                        color: var(--bs-primary);
+                  }
+            }
+      }
+      .btn:focus {
+            box-shadow: none;
+      }
+      .btn.focus,
+      .btn:focus-visible {
+            outline: -webkit-focus-ring-color auto 1px;
+      }
+      .fa {
+            font-family: Font Awesome\5 Free;
+            font-weight: 900;
+            color: var(--bs-primary);
+            margin-right: 5px;
+            min-width: 25px;
+      }
+      [data-toggle="collapse"] .fa:after {
+            content: "\f0dd";
+      }
+      [data-toggle="collapse"].collapsed .fa:after {
+            content: "\f0da";
+      }
+}

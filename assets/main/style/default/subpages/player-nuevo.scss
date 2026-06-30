@@ -1,0 +1,28 @@
+
+@import '/assets/main/js/plugins/nuevo/skins/nuevo/vjs-nuevo.css';
+
+
+.externalIframe,
+.externalIframe iframe {
+    height: 100%;
+    width: 100%;
+}
+.vjs-poster {
+    background-size: cover;
+    img {
+        width: 100%;
+    }
+}
+
+.vjs-ended {
+    .vjs-poster {
+        opacity: 1;
+    }
+    .vjs-replay-button {
+        display: none;
+    }
+}
+#short .vjs-big-play-button {
+    display: none;
+}
+

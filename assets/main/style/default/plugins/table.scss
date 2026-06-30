@@ -1,0 +1,61 @@
+/******Tabela*******/
+.article-content table {
+	margin: 15px auto;
+	width: 100%;
+	background-color: var(--bs-light) !important;
+
+	h2 {
+		margin-top: 0 !important;
+	}
+
+	caption {
+		caption-side: top;
+		color: var(--bs-secondary);
+		padding-top: 0px;
+	}
+
+	tr.naglowek_2 {
+		background-color: var(--bs-primary);
+		font-weight: 500;
+		border: 0px;
+		color: var(--bs-white);
+
+		th {
+			background-color: var(--bs-primary);
+		}
+	}
+
+	tr.naglowek {
+		background-color: $table-naglowek;
+		font-weight: 500;
+		border: 0px;
+
+		td {
+			border: 4px solid $table-border-color;
+
+		}
+	}
+
+	tr {
+		border: 0px;
+	}
+
+	td {
+		padding: 15px;
+		border: 4px solid $table-border-color;
+		text-align: left;
+		background-color: $light;
+	}
+
+	th {
+		padding: 15px;
+		background-color: $table-naglowek;
+		font-weight: 500;
+		border: 4px solid $table-border-color !important;
+		text-align: center;
+	}
+
+	p {
+		margin: 0px;
+	}
+}

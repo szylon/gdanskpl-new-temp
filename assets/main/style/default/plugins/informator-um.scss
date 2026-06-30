@@ -1,0 +1,69 @@
+/************* buttony rezerwacja itd.**********************/
+
+.um-button {
+    font-family: $secondary-font-family;
+    font-weight: 600;
+    line-height: 1.2;
+    i {
+        font-size: 3rem;
+    }
+    a {
+        &:link,
+        &:visited {
+            color: var(--bs-primary);
+            transition: 0.2s;
+        }
+        &:hover {
+            text-decoration: none;
+            color: $secondary;
+        }
+    }
+}
+
+/************do boxu um na glownej**************/
+
+.fa-deaf {
+    font-size: 1.5em;
+    padding-left: 10px;
+}
+
+.info-um {
+    .lista-mini {
+        ul {
+            margin: 0px;
+            padding: 0px;
+            font-size: 0.9rem;
+            font-family: $secondary-font-family;
+            li {
+                padding: 0px;
+                display: inline-block;
+                margin-right: 10px;
+                a:link,
+                a:visited,
+                a:active {
+                    overflow: hidden;
+                    font-weight: normal;
+                    border: 0px;
+                    padding-right: 10px;
+                    color: $secondary;
+                }
+            }
+            .slideshow {
+                width: 90%;
+                text-align: center;
+                margin: 10px auto;
+                .carousel-indicators {
+                    color: $secondary;
+                }
+            }
+        }
+        @media (max-width: 768px) {
+            .info-um .slideshow {
+                width: 60%;
+            }
+        }
+        .panel-group .panel {
+            border-radius: 0px;
+        }
+    }
+}

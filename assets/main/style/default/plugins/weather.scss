@@ -1,0 +1,12 @@
+.weather {
+    a {
+        &:link,
+        &:visited {
+            color: var(--bs-primary);
+        }
+    }
+
+    & span {
+        font-weight: 900;
+    }
+}

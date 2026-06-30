@@ -1,0 +1,34 @@
+@import "./custom-colors";
+
+@import "./../default/custom-variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~owl.carousel/dist/assets/owl.carousel.css";
+
+@import "./../default/customer-styles";
+@import "./../default/customer-plugins";
+@import "./../default/plugins/strategia";
+@import "./../default/plugins/park-kulturowy";
+
+.btn-theme-dark {
+	display: none;
+}
+.btn-theme-light {
+	display: block;
+}
+
+.openbtn {
+	color: $white;
+	&:hover {
+		background: $light;
+	}
+}
+.vignette {
+	.logo {
+		img.default {
+			display: none;
+		}
+		img.white {
+			display: block;
+		}
+	}
+}

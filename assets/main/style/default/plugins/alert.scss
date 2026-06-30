@@ -1,0 +1,46 @@
+.alert {
+	padding:.75rem;
+}
+.alert-warning {
+	background:$white;
+	border:4px solid $danger;
+	color:$body-color;
+	a {
+		&:link, &:visited {
+			color:$danger;
+		}
+		&:hover {
+			color:$body-color;
+		}
+	}
+}
+
+.list .warning {
+	li {
+		&:not(.space):before {
+			color:$danger;
+		}
+		a {
+			&:link, &:visited {
+				color:$danger;
+			}
+			&:hover {
+				color:$body-color;
+			}
+		}
+	}
+}
+.alert-danger {
+	background:$danger;
+	border:0;
+	color:$light;
+	a {
+		&:link, &:visited {
+			color:$white;
+			text-decoration: underline;
+		}
+		&:hover {
+			color:$gray;
+		}
+	}
+}

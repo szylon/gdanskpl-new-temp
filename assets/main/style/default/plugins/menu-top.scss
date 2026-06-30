@@ -1,0 +1,152 @@
+$menu-top-background-active: darken($light, 5%);
+
+
+/*Menu top*/
+
+.menu-top {
+    background-color: var(--bs-default-primary);
+    line-height: 1.1;
+    z-index:1090;
+    .navbar {
+        padding: 0px;
+        .navbar-brand {
+            padding: 0px;
+            font-size: 1rem;
+            &:after {
+                content: "";
+                border-left: 6px solid $white;
+                background-color: $secondary;
+                padding-right: 12px !important;
+                display: block;
+            }
+            img {
+                margin: 0.45rem 0;
+                max-height: 30px;
+            }
+        }
+        .active {
+            background-color: $menu-top-background-active;
+            color: var(--bs-body-color);
+        }
+        .navbar-toggler {
+            color: var(--bs-white);
+            border: 0;
+        }
+        .navbar-nav {
+            li {
+                @include media-breakpoint-up(lg) {
+                    border-right: 0px solid var(--bs-white);
+                }
+                &:hover {
+                    background-color: var(--bs-light);
+                    cursor: pointer;
+                    .nav-link {
+                        color: var(--bs-body-color) !important;
+                    }
+                }
+                &.show {
+                    background-color: var(--bs-light);
+                    color: var(--bs-body-color);
+                    .nav-link {
+                        color: var(--bs-body-color) !important;
+                    }
+                }
+                &.active {
+                    background-color: $menu-top-background-active;
+                    .nav-link:link,
+                    .nav-link:visited {
+                        color: var(--bs-body-color);
+                    }
+                }
+                .nav-link {
+                    padding-top: 1rem !important;
+                    padding-bottom: 1rem !important;
+                    text-align: center;
+                }
+                .nav-link:link,
+                .nav-link:visited {
+                    color: var(--bs-white);
+                }
+                .nav-link:active {
+                    color: var(--bs-body-color);
+                }
+                &.warning {
+                    background-color: var(--bs-light);
+                    border-top: 1px solid var(--bs-gray);
+                    border-bottom: 1px solid var(--bs-gray);
+                    .nav-link:link {
+                        color: var(--bs-danger) !important;
+                    }
+                }
+                &.rip {
+                    background-color: var(--bs-black);
+                }
+                &.danger {
+                    background-color: var(--bs-danger);
+                }
+                &.extra {
+                    background-color: var(--bs-secondary);
+                }
+                &.warning,
+                &.rip,
+                &.danger,
+                &.extra {
+                    &:hover {
+                        background-color: var(--bs-light);
+                        cursor: pointer;
+                        .nav-link {
+                            color: var(--bs-body-color) !important;
+                        }
+                    }
+                }
+            }
+        }
+        .navbar-collapse {
+            .navbar-nav {
+                .nav-link {
+                    @include media-breakpoint-down(lg) {
+                        padding-top: 0.25rem !important;
+                        padding-bottom: 0.25rem !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*Dropdown*/
+
+.menu-top {
+    .dropdown-menu {
+        border: 0 !important;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        z-index: 1075 !important;
+        background-color: var(--bs-default-secondary);
+        font-size: 0.9rem;
+        font-weight: 300;
+        margin: 0;
+        border-radius: 0 0 $border-radius $border-radius;
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                padding: .5rem 1.25rem !important;
+                &:hover {
+                    background-color: var(--bs-default-primary) !important;
+                }
+                a {
+                    &:link,
+                    &:visited {
+                        color: var(--bs-white);
+                    }
+                }
+            }
+        }
+    }
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: $navbar-nav-link-padding-x;
+        padding-left: $navbar-nav-link-padding-x;
+    }
+}
